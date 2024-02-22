@@ -16,7 +16,7 @@
   }
 }
 
-html{
+html {
   overflow-y: scroll;
 }
 
@@ -43,6 +43,15 @@ h1 {
   color: #5b5b5b;
 }
 
+ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
 h2 {
   font-weight: bold;
   font-size: 22px;
@@ -55,7 +64,6 @@ h3 {
   color: #5b5b5b;
 }
 
-
 pre {
   margin: 12px 0;
   color: #fff;
@@ -63,4 +71,10 @@ pre {
   padding: 8px;
   text-wrap: wrap;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.25rem;
+  }
 }

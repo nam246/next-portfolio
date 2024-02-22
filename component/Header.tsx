@@ -7,9 +7,9 @@ export default function Header() {
                 <div className="logo text-left">
                 </div>
                 <div className="w-full">
-                    <Navigation />
                 </div>
             </div>
+            <Navigation />
         </header>
     )
 }
