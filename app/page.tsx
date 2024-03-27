@@ -3,6 +3,14 @@ import Link from "next/link"
 
 export default function Homepage() {
 
+    const information = {
+        name: "VŨ HOÀNG DIỆU TRUNG",
+        email: "trungvuhoang2005@gmail.com",
+        phoneNumber: "+84984041242",
+        github: "https://github.com/nam246",
+        bio: "Experienced Front-End developer have a fundamental knowledge about HTML, CSS, JavaScript (ES6, JQuery). I've describe a web page's interface and functionality using JavaScript and PHP. Make discuss with business department and client to solved client's task. I am even have a basic knowledge about backend My job target is to be a senior fullstack developer in next 2 years."
+    }
+
     return (
         <div className="wrapper">
             <div className="section mb-3 flex flex-col lg:flex-row justify-between align-start gap-5">
@@ -12,19 +20,15 @@ export default function Homepage() {
                         <source media="" srcSet="" />
                         <Image src="/user-circle-filled_gray.svg" width={150} height={150} alt="user-image" />
                     </picture>
-                    <h1>VŨ HOÀNG DIỆU TRUNG</h1>
+                    <h1>{information.name}</h1>
                     <ul className="list-none ps-0">
-                        <li><i className="fa-solid fa-envelope"></i> Email: <Link href="mailto:trungvuhoang2005@gmail.com">trungvuhoang2005@gmail.com</Link></li>
-                        <li><i className="fa-solid fa-phone"></i> Phone number: <Link href="tel:+84984041242">+84 98 40 41 242</Link></li>
-                        <li><i className="fa-brands fa-github"></i> <Link href="https://github.com/nam246">Github</Link></li>
+                        <li><i className="fa-solid fa-envelope"></i> Email: <Link href={"mailto:" + information.email}>{information.email}</Link></li>
+                        <li><i className="fa-solid fa-phone"></i> Phone number: <Link href={"tel:" + information.phoneNumber}>{information.phoneNumber}</Link></li>
+                        <li><i className="fa-brands fa-github"></i> <Link href={information.github}>Github</Link></li>
                     </ul>
 
                     <div className="bg-slate-100 rounded-md p-3 my-5 cursor-pointer hover:text-sky-500 transition-all">
-                        Experienced Front-End developer have a fundamental knowledge about HTML, CSS, JavaScript (ES6, JQuery).
-                        I've describe a web page's interface and functionality using JavaScript and PHP.
-                        Make discuss with business department and client to solved client's task.
-                        I am even have a basic knowledge about backend
-                        My job target is to be a senior fullstack developer in next 2 years.
+                        {information.bio}
                     </div>
                 </div>
 
