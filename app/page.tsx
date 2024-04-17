@@ -8,7 +8,44 @@ export default function Homepage() {
         email: "trungvuhoang2005@gmail.com",
         phoneNumber: "+84984041242",
         github: "https://github.com/nam246",
-        bio: "Experienced Front-End developer have a fundamental knowledge about HTML, CSS, JavaScript (ES6, JQuery). I've describe a web page's interface and functionality using JavaScript and PHP. Make discuss with business department and client to solved client's task. I am even have a basic knowledge about backend My job target is to be a senior fullstack developer in next 2 years."
+        bio: "Experienced Front-End developer have a fundamental knowledge about HTML, CSS, JavaScript (ES6, JQuery). I've describe a web page's interface and functionality using JavaScript and PHP. Make discuss with business department and client to solved client's task. I am even have a basic knowledge about backend My job target is to be a senior fullstack developer in next 2 years.",
+        skills: [
+            {
+                name: "",
+                description: ""
+            },
+            {
+                name: "",
+                description: ""
+            }
+        ],
+        experiences: [
+            {
+                title: "",
+                companyName: "",
+                companyWebsite: "",
+                startDate: Date(),
+                endDate: Date(),
+                accomplishments: "",
+            },
+
+        ],
+        education: [
+            {
+                name: "",
+                major: "",
+                degrees: "",
+                startDate: Date(),
+                endDate: Date(),
+                achievements: "",
+            }
+        ],
+        language: [
+            {
+                name: "",
+                proficiency: "",
+            }
+        ]
     }
 
     return (
@@ -43,7 +80,7 @@ export default function Homepage() {
                 </div>
                 <ul className="">
                     <li className="hover:text-sky-500 transition-all">
-                        HTML, CSS, JavaScript (ES6, JQuery)
+                        HTML, CSS (SASS, LESS, Bootstrap, TailwindCSS), JavaScript (ES6, JQuery)
                         <p>Using HTML, CSS, JavaScript to building user interface, describe a web page's appearance/presentation and functionality/behavior.</p>
                         <p>Fetch API from backend and get data using asynchronous JavaScript or JQuery AJAX.</p>
                         <p>Experienced modern web framework/library such as VueJS, ReactJS, NextJS.</p>
