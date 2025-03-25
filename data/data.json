@@ -1,0 +1,71 @@
+[
+  {
+    "index": 1,
+    "day": "thứ 2",
+    "subjects": [
+      {
+        "maMonHoc": "MA001",
+        "tenMonHoc": "tat",
+        "phongHoc": "it009",
+        "thoiGianBatDau": "2025-03-24",
+        "thoiGianKetThuc": "2025-03-25"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "day": "thứ 3",
+    "subjects": [
+      {}
+    ]
+  },
+  {
+    "index": 3,
+    "day": "thứ 4",
+    "subjects": [
+      {
+        "maMonHoc": "001",
+        "tenMonHoc": "Thu khung",
+        "phongHoc": "kp3",
+        "thoiGianBatDau": "2025-03-13",
+        "thoiGianKetThuc": "2025-03-28"
+      },
+      {
+        "maMonHoc": "IT007",
+        "tenMonHoc": "Thu khung",
+        "phongHoc": "kp3",
+        "thoiGianBatDau": "2025-03-12",
+        "thoiGianKetThuc": "2025-03-29"
+      },
+      {
+        "maMonHoc": "IT007",
+        "tenMonHoc": "ctdl",
+        "phongHoc": "it009",
+        "thoiGianBatDau": "2025-03-24",
+        "thoiGianKetThuc": "2025-03-25"
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "day": "thứ 5",
+    "subjects": [
+      {}
+    ]
+  },
+  {
+    "index": 5,
+    "day": "thứ 6",
+    "subjects": []
+  },
+  {
+    "index": 6,
+    "day": "thứ 7",
+    "subjects": []
+  },
+  {
+    "index": 7,
+    "day": "chủ nhật",
+    "subjects": []
+  }
+]
