@@ -1,0 +1,29 @@
+{
+    "personalInfo": {
+        "fullName": "Vu Hoang Dieu Trung",
+        "dateOfBirth": "",
+        "gender": "male",
+        "phone": "098 40 41 242",
+        "email": "trungvuhoang2005@gmail.com",
+        "address": "Bien Hoa, Dong Nai",
+        "position": "Software Developer",
+        "description": "",
+        "summary": ""
+    },
+    "workExperience": {
+        "from": "",
+        "to": "",
+        "company": "",
+        "position": "",
+        "description": ""
+    },
+    "skills": {
+
+    },
+    "education": {
+
+    },
+    "languages": {
+        
+    }
+}

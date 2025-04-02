@@ -6,14 +6,22 @@
         "maMonHoc": "MA001",
         "tenMonHoc": "tat",
         "phongHoc": "it009",
-        "thoiGianBatDau": "2025-03-28T00:00:00.000Z",
-        "thoiGianKetThuc": "2025-03-29T00:00:00.000Z"
+        "thoiGianBatDau": "2025-04-02T15:50:00.000Z",
+        "thoiGianKetThuc": "2025-04-26T03:50:00.000Z"
       }
     ]
   },
   {
     "day": "thứ 3",
-    "subjects": []
+    "subjects": [
+      {
+        "maMonHoc": "MA001",
+        "tenMonHoc": "ctdl",
+        "phongHoc": "at",
+        "thoiGianBatDau": "2025-04-09T15:54:00.000Z",
+        "thoiGianKetThuc": "2025-04-17T15:54:00.000Z"
+      }
+    ]
   },
   {
     "day": "thứ 4",
@@ -29,7 +37,15 @@
   },
   {
     "day": "thứ 7",
-    "subjects": []
+    "subjects": [
+      {
+        "maMonHoc": "IT007",
+        "tenMonHoc": "ctdl",
+        "phongHoc": "kp3",
+        "thoiGianBatDau": "2025-05-01T15:50:00.000Z",
+        "thoiGianKetThuc": "2025-04-24T15:50:00.000Z"
+      }
+    ]
   },
   {
     "day": "chủ nhật",
