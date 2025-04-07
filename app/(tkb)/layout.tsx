@@ -26,7 +26,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <h1 className="font-bold text-center py-2">THỜI KHÓA BIỂU</h1>
         {children}
       </body>
     </html>

@@ -1,282 +1,504 @@
 "use client"
-import { useState, useEffect, useCallback } from "react";
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label"; // Sửa import từ radix-ui thành component UI
+import { Label } from "@/components/ui/label"; // Fixed import
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
+
 import { Button } from "@/components/ui/button";
+import { Popover, PopoverTrigger } from "@/components/ui/popover";
+import { PopoverContent } from "@/components/ui/popover";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-    CardFooter
-} from "@/components/ui/card";
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger
+} from "@/components/ui/tabs";
 import {
-    Popover,
-    PopoverTrigger,
-    PopoverContent
-} from "@/components/ui/popover"; // Gộp import từ cùng một package
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableFooter,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table";
+import { Trash2, Plus } from "lucide-react";
 
-type Subject = {
-    maMonHoc: string;
-    tenMonHoc: string;
-    phongHoc: string;
-    thoiGianBatDau: Date;
-    thoiGianKetThuc: Date;
+// Type definitions
+interface Semester {
+    id: number;
+    year: string;
 }
 
-type TkbType = {
-    index: number;
+interface Course {
+    id: number;
+    course_id: string;
+    name: string;
+    room: string;
+    credit: number;
+    teacher: string;
     day: string;
-    subjects: Subject[];
+    time: string;
+    start_date: string;
+    end_date: string;
+    semester_id: number;
 }
 
-// Kiểu form data tách riêng
-type FormDataType = Omit<Subject, 'thoiGianBatDau' | 'thoiGianKetThuc'> & {
-    thoiGianBatDau: string;
-    thoiGianKetThuc: string;
-};
+interface SemesterFormData {
+    year: string;
+}
 
-// Form ban đầu
-const initialFormData: FormDataType = {
-    maMonHoc: "",
-    tenMonHoc: "",
-    phongHoc: "",
-    thoiGianBatDau: "",
-    thoiGianKetThuc: ""
-};
+interface CourseFormData {
+    courseId: string;
+    name: string;
+    room: string;
+    credit: number;
+    teacher: string;
+    day: string;
+    time: string;
+    startDate: string;
+    endDate: string;
+    semesterId: number | null;
+}
 
 export default function Tkb() {
-    const [data, setData] = useState<TkbType[]>([]);
-    const [formData, setFormData] = useState<FormDataType>(initialFormData);
+    const [semesters, setSemesters] = useState<Semester[]>([]);
+    const [courses, setCourses] = useState<Course[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Tách fetch data thành hàm riêng và memoize nó
-    const fetchData = useCallback(async () => {
+    const [semesterFormData, setSemesterFormData] = useState<SemesterFormData>({
+        year: ""
+    });
+
+    const [courseFormData, setCourseFormData] = useState<CourseFormData>({
+        courseId: "",
+        name: "",
+        room: "",
+        credit: 0,
+        teacher: "",
+        day: "",
+        time: "",
+        startDate: "",
+        endDate: "",
+        semesterId: null,
+    });
+
+    // Fetch data on component mount
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            try {
+                const [semestersRes, coursesRes] = await Promise.all([
+                    axios.get("/api/tkb/semester"),
+                    axios.get("/api/tkb")
+                ]);
+
+                setSemesters(semestersRes.data);
+                setCourses(coursesRes.data);
+            } catch (err) {
+                console.error("Error fetching data:", err);
+                setError("Không thể tải dữ liệu. Vui lòng thử lại sau.");
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    // Input handlers
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+
+        if (name === 'year') {
+            setSemesterFormData(prev => ({ ...prev, [name]: value }));
+        } else {
+            const parsedValue = name === 'credit' ? parseInt(value) : value;
+            setCourseFormData(prev => ({ ...prev, [name]: parsedValue }));
+        }
+    }
+
+    // Form submission handlers
+    const handleSemesterFormSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!semesterFormData.year.trim()) {
+            return; // Prevent empty submission
+        }
+
         try {
             setIsLoading(true);
-            const res = await fetch("/api/tkb");
-            if (!res.ok) throw new Error("Failed to fetch data");
-            const newData = await res.json();
-            setData(newData);
-            setError(null);
+            await axios.post('/api/tkb/semester', semesterFormData);
+
+            // Refresh data
+            const res = await axios.get("/api/tkb/semester");
+            setSemesters(res.data);
+
+            // Reset form
+            setSemesterFormData({ year: "" });
         } catch (error) {
-            console.error("Lỗi khi fetch API:", error);
-            setError("Không thể tải dữ liệu. Vui lòng thử lại sau.");
+            console.error("Error submitting semester:", error);
+            setError("Không thể tạo học kỳ mới. Vui lòng thử lại.");
         } finally {
             setIsLoading(false);
         }
-    }, []);
+    }
 
-    useEffect(() => {
-        fetchData();
-    }, [fetchData]);
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent, index: number) => {
+    const handleCourseFormSubmit = async (e: React.FormEvent, semesterId: number) => {
         e.preventDefault();
+
+        // Form validation
+        if (!courseFormData.name.trim() || !courseFormData.courseId.trim()) {
+            return; // Prevent incomplete submission
+        }
+
         try {
-            // Convert strings to Date objects
-            const reqData = {
-                ...formData,
-                thoiGianBatDau: new Date(formData.thoiGianBatDau),
-                thoiGianKetThuc: new Date(formData.thoiGianKetThuc)
-            };
+            setIsLoading(true);
+            const reqData = { ...courseFormData, semesterId };
+            await axios.post('/api/tkb', reqData);
 
-            const res = await fetch("/api/tkb", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    index,
-                    data: reqData
-                }),
+            // Refresh course data
+            const res = await axios.get("/api/tkb");
+            setCourses(res.data);
+
+            // Reset form
+            setCourseFormData({
+                courseId: "",
+                name: "",
+                room: "",
+                credit: 0,
+                teacher: "",
+                day: "",
+                time: "",
+                startDate: "",
+                endDate: "",
+                semesterId: null,
             });
-
-            if (!res.ok) throw new Error("Failed to create");
-
-            // Reset form and refresh data
-            setFormData(initialFormData);
-            fetchData();
         } catch (error) {
-            console.error("Error:", error);
+            console.error("Error submitting course:", error);
             setError("Không thể thêm môn học. Vui lòng thử lại.");
+        } finally {
+            setIsLoading(false);
         }
-    };
+    }
 
-    const handleAction = async (method: string, index: number, arrIndex: number) => {
+    const handleDeleteCourse = async (courseId: number) => {
         try {
-            const res = await fetch("/api/tkb", {
-                method,
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ index, arrIndex }),
-            });
+            setIsLoading(true);
+            await axios.delete(`/api/tkb/${courseId}`);
 
-            if (!res.ok) throw new Error(`Failed to ${method.toLowerCase()}`);
-
-            // Refresh data instead of reloading page
-            fetchData();
+            // Update local state to reflect deletion
+            setCourses(prev => prev.filter(course => course.id !== courseId));
         } catch (error) {
-            console.error(`Error during ${method}:`, error);
-            setError(`Không thể thực hiện hành động. Vui lòng thử lại.`);
+            console.error("Error deleting course:", error);
+            setError("Không thể xóa môn học. Vui lòng thử lại.");
+        } finally {
+            setIsLoading(false);
         }
-    };
+    }
 
-    const handleDelete = (index: number, arrIndex: number) =>
-        handleAction("DELETE", index, arrIndex);
+    // Filter courses by semester
+    const getCoursesBySemester = (semesterId: number) => {
+        return courses.filter(course => course.semester_id === semesterId);
+    }
 
-    const handlePatch = (index: number, arrIndex: number) =>
-        handleAction("PATCH", index, arrIndex);
+    // Render loading state
+    if (isLoading && semesters.length === 0) {
+        return <div className="p-5">Đang tải dữ liệu...</div>;
+    }
 
-    const calculateTimeRemaining = (endDate: Date): number => {
-        const now = new Date();
-        const diff = new Date(endDate).getTime() - now.getTime();
-        return diff / (1000 * 60 * 60 * 24); // Convert to days
-    };
-
-    const renderSubjectCountdown = (subject: Subject, index: number, arrIndex: number) => {
-        const timeRemaining = calculateTimeRemaining(new Date(subject.thoiGianKetThuc));
-
-        if (timeRemaining <= 0) {
-            handleDelete(index, arrIndex);
-            return null;
-        }
-
-        return `Môn ${subject.tenMonHoc} - Thời gian còn lại: ${timeRemaining.toFixed(2)} ngày`;
-    };
-
-    if (isLoading) return <div className="flex justify-center p-8">Đang tải...</div>;
-    if (error) return <div className="flex justify-center p-8 text-red-500">{error}</div>;
-    if (!data || data.length === 0) return <div className="flex justify-center p-8">Không có dữ liệu</div>;
+    // Render error state
+    if (error && semesters.length === 0) {
+        return <div className="p-5 text-red-500">{error}</div>;
+    }
 
     return (
-        <div className="container mx-auto p-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-4">
-                {data.map((item: TkbType, index: number) => (
-                    <Card key={`day-${index}`} className="h-full">
-                        <CardHeader>
-                            <CardTitle>{item.day}</CardTitle>
-                        </CardHeader>
+        <Tabs className="p-5" defaultValue="addCourse">
+            <TabsList className="mb-4">
+                <TabsTrigger value="tkb">Thời khóa biểu</TabsTrigger>
+                <TabsTrigger value="addSemester">Thông tin học kỳ</TabsTrigger>
+                <TabsTrigger value="addCourse">Thêm môn học</TabsTrigger>
+            </TabsList>
 
-                        <div className="flex-grow">
-                            {item.subjects.length > 0 ? (
-                                item.subjects.map((subject, i) => (
-                                    <CardContent key={`subject-${i}`} className="border-b last:border-0 pb-4">
-                                        <div className="space-y-1">
-                                            <p>Mã môn học: <b>{subject.maMonHoc}</b></p>
-                                            <p>Môn: <b>{subject.tenMonHoc}</b></p>
-                                            <p>Phòng học: <b>{subject.phongHoc}</b></p>
-                                            <p>Kết thúc: <b>{new Date(subject.thoiGianKetThuc).toLocaleString('vi-VN')}</b></p>
-                                            <p>{renderSubjectCountdown(subject, index, i)}</p>
-                                        </div>
-                                        <div className="mt-2 space-x-2 flex">
-                                            <Button
-                                                variant="destructive"
-                                                onClick={() => handleDelete(index, i)}
-                                                size="sm"
-                                            >
-                                                Xóa
-                                            </Button>
-                                            <Button
-                                                variant="secondary"
-                                                onClick={() => handlePatch(index, i)}
-                                                size="sm"
-                                            >
-                                                Sửa
-                                            </Button>
-                                        </div>
-                                    </CardContent>
-                                ))
+            <TabsContent value="tkb">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-4">
+                    {/* Timetable view implementation can go here */}
+                    <div className="col-span-full">
+                        <p>Tính năng hiển thị thời khóa biểu đang được phát triển</p>
+                    </div>
+                </div>
+            </TabsContent>
+
+            <TabsContent value="addSemester">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <form onSubmit={handleSemesterFormSubmit} className="border rounded-md p-4">
+                            <h3 className="text-lg font-medium mb-4">Thêm học kỳ mới</h3>
+                            <div className="mb-4">
+                                <Label htmlFor="year" className="block mb-2">Niên học</Label>
+                                <Input
+                                    type="text"
+                                    id="year"
+                                    name="year"
+                                    placeholder="Ví dụ: 2023-2024"
+                                    value={semesterFormData.year}
+                                    onChange={handleInputChange}
+                                    className="w-full"
+                                />
+                            </div>
+                            <Button type="submit" disabled={isLoading}>
+                                {isLoading ? "Đang xử lý..." : "Thêm học kỳ"}
+                            </Button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div className="border rounded-md p-4">
+                            <h3 className="text-lg font-medium mb-4">Danh sách học kỳ</h3>
+                            {semesters.length > 0 ? (
+                                <ul className="space-y-2">
+                                    {semesters.map((semester) => (
+                                        <li key={semester.id} className="p-2 border rounded">
+                                            Học kỳ {semester.year}
+                                        </li>
+                                    ))}
+                                </ul>
                             ) : (
-                                <CardContent>
-                                    <p className="text-center text-gray-500">Chưa có môn học</p>
-                                </CardContent>
+                                <p>Chưa có học kỳ nào</p>
                             )}
                         </div>
+                    </div>
+                </div>
+            </TabsContent>
 
-                        <CardFooter className="pt-4">
-                            <Popover>
-                                <PopoverTrigger asChild>
-                                    <Button variant="outline" className="w-full">Thêm môn học</Button>
-                                </PopoverTrigger>
-                                <PopoverContent className="w-80">
-                                    <form
-                                        onSubmit={(e) => handleSubmit(e, index)}
-                                        className="space-y-4"
-                                    >
-                                        <div className="space-y-1">
-                                            <Label htmlFor={`maMonHoc-${index}`}>Mã môn học</Label>
-                                            <Input
-                                                id={`maMonHoc-${index}`}
-                                                name="maMonHoc"
-                                                placeholder="Nhập mã môn học"
-                                                value={formData.maMonHoc}
-                                                onChange={handleInputChange}
-                                                required
-                                            />
-                                        </div>
-                                        <div className="space-y-1">
-                                            <Label htmlFor={`tenMonHoc-${index}`}>Tên môn học</Label>
-                                            <Input
-                                                id={`tenMonHoc-${index}`}
-                                                name="tenMonHoc"
-                                                placeholder="Nhập tên môn học"
-                                                value={formData.tenMonHoc}
-                                                onChange={handleInputChange}
-                                                required
-                                            />
-                                        </div>
-                                        <div className="space-y-1">
-                                            <Label htmlFor={`phongHoc-${index}`}>Phòng học</Label>
-                                            <Input
-                                                id={`phongHoc-${index}`}
-                                                name="phongHoc"
-                                                placeholder="Nhập phòng học"
-                                                value={formData.phongHoc}
-                                                onChange={handleInputChange}
-                                                required
-                                            />
-                                        </div>
-                                        <div className="space-y-1">
-                                            <Label htmlFor={`thoiGianBatDau-${index}`}>Thời gian bắt đầu</Label>
-                                            <Input
-                                                id={`thoiGianBatDau-${index}`}
-                                                type="datetime-local"
-                                                name="thoiGianBatDau"
-                                                value={formData.thoiGianBatDau}
-                                                onChange={handleInputChange}
-                                                required
-                                            />
-                                        </div>
-                                        <div className="space-y-1">
-                                            <Label htmlFor={`thoiGianKetThuc-${index}`}>Thời gian kết thúc</Label>
-                                            <Input
-                                                id={`thoiGianKetThuc-${index}`}
-                                                type="datetime-local"
-                                                name="thoiGianKetThuc"
-                                                value={formData.thoiGianKetThuc}
-                                                onChange={handleInputChange}
-                                                required
-                                            />
-                                        </div>
-                                        <Button type="submit" className="w-full">
-                                            Thêm môn học
-                                        </Button>
-                                    </form>
-                                </PopoverContent>
-                            </Popover>
-                        </CardFooter>
-                    </Card>
-                ))}
-            </div>
-        </div>
+            <TabsContent value="addCourse">
+                <div className="grid grid-cols-1 lg:grid-cols-8 gap-5">
+                    <div className="lg:col-span-2">
+                        <form onSubmit={handleSemesterFormSubmit}
+                            className="flex flex-col border rounded-md p-4 mb-5">
+                            <h3 className="text-lg font-medium mb-4">Thêm học kỳ mới</h3>
+                            <div className="mb-4">
+                                <Label htmlFor="year-course-tab">Niên học</Label>
+                                <Input
+                                    id="year-course-tab"
+                                    type="text"
+                                    name="year"
+                                    placeholder="Nhập niên học"
+                                    value={semesterFormData.year}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <Button className="mt-2" type="submit" disabled={isLoading}>
+                                {isLoading ? "Đang xử lý..." : "Thêm học kỳ"}
+                            </Button>
+                        </form>
+                    </div>
+
+                    <div className="lg:col-span-6">
+                        {error && <div className="mb-4 p-2 bg-red-100 text-red-800 rounded">{error}</div>}
+
+                        {semesters.length > 0 ? semesters.map((semester) => {
+                            const semesterCourses = getCoursesBySemester(semester.id);
+
+                            return (
+                                <Table key={semester.id} className="mb-8 border rounded">
+                                    <TableCaption>Thông tin học phần học kỳ {semester.year}</TableCaption>
+                                    <TableHeader>
+                                        <TableRow>
+                                            <TableHead className="w-[50px]">STT</TableHead>
+                                            <TableHead>Mã lớp học</TableHead>
+                                            <TableHead>Tên môn học</TableHead>
+                                            <TableHead>Số tín chỉ</TableHead>
+                                            <TableHead>Giáo viên</TableHead>
+                                            <TableHead>Thứ</TableHead>
+                                            <TableHead>Giờ</TableHead>
+                                            <TableHead>Thời gian bắt đầu</TableHead>
+                                            <TableHead>Thời gian kết thúc</TableHead>
+                                            <TableHead>
+                                                <Popover>
+                                                    <PopoverTrigger asChild>
+                                                        <Button variant="outline" size="sm">
+                                                            <Plus className="h-4 w-4" />
+                                                        </Button>
+                                                    </PopoverTrigger>
+                                                    <PopoverContent className="w-80">
+                                                        <form onSubmit={(e) => handleCourseFormSubmit(e, semester.id)}
+                                                            className="space-y-4">
+                                                            <h3 className="font-medium">Thêm môn học mới</h3>
+
+                                                            <div>
+                                                                <Label htmlFor="courseId">Mã môn học</Label>
+                                                                <Input
+                                                                    id="courseId"
+                                                                    type="text"
+                                                                    name="courseId"
+                                                                    placeholder="Nhập mã môn học"
+                                                                    value={courseFormData.courseId}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="name">Tên môn học</Label>
+                                                                <Input
+                                                                    id="name"
+                                                                    type="text"
+                                                                    name="name"
+                                                                    placeholder="Nhập tên môn học"
+                                                                    value={courseFormData.name}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="room">Phòng học</Label>
+                                                                <Input
+                                                                    id="room"
+                                                                    type="text"
+                                                                    name="room"
+                                                                    placeholder="Nhập phòng học"
+                                                                    value={courseFormData.room}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="credit">Số tín chỉ</Label>
+                                                                <Input
+                                                                    id="credit"
+                                                                    type="number"
+                                                                    name="credit"
+                                                                    placeholder="Nhập số tín chỉ"
+                                                                    value={courseFormData.credit}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="teacher">Giáo viên</Label>
+                                                                <Input
+                                                                    id="teacher"
+                                                                    type="text"
+                                                                    name="teacher"
+                                                                    placeholder="Nhập tên giáo viên"
+                                                                    value={courseFormData.teacher}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="day">Thứ</Label>
+                                                                <Select
+                                                                    onValueChange={(value) =>
+                                                                        setCourseFormData(prev => ({ ...prev, day: value }))
+                                                                    }
+                                                                >
+                                                                    <SelectTrigger>
+                                                                        <SelectValue placeholder="Chọn thứ" />
+                                                                    </SelectTrigger>
+                                                                    <SelectContent>
+                                                                        <SelectItem value="2">Thứ 2</SelectItem>
+                                                                        <SelectItem value="3">Thứ 3</SelectItem>
+                                                                        <SelectItem value="4">Thứ 4</SelectItem>
+                                                                        <SelectItem value="5">Thứ 5</SelectItem>
+                                                                        <SelectItem value="6">Thứ 6</SelectItem>
+                                                                        <SelectItem value="7">Thứ 7</SelectItem>
+                                                                    </SelectContent>
+                                                                </Select>
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="time">Giờ học</Label>
+                                                                <Input
+                                                                    id="time"
+                                                                    type="text"
+                                                                    name="time"
+                                                                    placeholder="VD: 7:30-9:00"
+                                                                    value={courseFormData.time}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="startDate">Thời gian bắt đầu</Label>
+                                                                <Input
+                                                                    id="startDate"
+                                                                    type="date"
+                                                                    name="startDate"
+                                                                    value={courseFormData.startDate}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <Label htmlFor="endDate">Thời gian kết thúc</Label>
+                                                                <Input
+                                                                    id="endDate"
+                                                                    type="date"
+                                                                    name="endDate"
+                                                                    value={courseFormData.endDate}
+                                                                    onChange={handleInputChange}
+                                                                />
+                                                            </div>
+                                                            <Button className="w-full" type="submit" disabled={isLoading}>
+                                                                {isLoading ? "Đang xử lý..." : "Thêm môn học"}
+                                                            </Button>
+                                                        </form>
+                                                    </PopoverContent>
+                                                </Popover>
+                                            </TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
+                                        {semesterCourses.length > 0 ? (
+                                            semesterCourses.map((course, index) => (
+                                                <TableRow key={course.id}>
+                                                    <TableCell className="font-medium">{index + 1}</TableCell>
+                                                    <TableCell>{course.course_id}</TableCell>
+                                                    <TableCell>{course.name}</TableCell>
+                                                    <TableCell>{course.credit}</TableCell>
+                                                    <TableCell>{course.teacher}</TableCell>
+                                                    <TableCell>{course.day ? `Thứ ${course.day}` : ""}</TableCell>
+                                                    <TableCell>{course.time}</TableCell>
+                                                    <TableCell>
+                                                        {course.start_date ? new Date(course.start_date).toLocaleDateString('vi-VN') : ""}
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        {course.end_date ? new Date(course.end_date).toLocaleDateString('vi-VN') : ""}
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        <Button
+                                                            className="bg-red-500 hover:bg-red-400"
+                                                            size="sm"
+                                                            onClick={() => handleDeleteCourse(course.id)}
+                                                            disabled={isLoading}
+                                                        >
+                                                            <Trash2 className="h-4 w-4" />
+                                                        </Button>
+                                                    </TableCell>
+                                                </TableRow>
+                                            ))
+                                        ) : (
+                                            <TableRow>
+                                                <TableCell colSpan={10} className="text-center">
+                                                    Chưa có môn học nào trong học kỳ này
+                                                </TableCell>
+                                            </TableRow>
+                                        )}
+                                    </TableBody>
+                                </Table>
+                            );
+                        }) : (
+                            <div className="text-center p-8 border rounded">
+                                <p>Chưa có học kỳ nào. Vui lòng thêm học kỳ trước.</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </TabsContent>
+        </Tabs>
     );
 }
