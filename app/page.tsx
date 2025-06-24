@@ -69,6 +69,12 @@ export default function Homepage() {
 							<i className="fa-brands fa-github"></i>{" "}
 							<Link href={information.github}>Github</Link>
 						</li>
+						<li>
+							<i className="fa-solid fa-paperclip"></i>{" "}
+							<Link href="/VuHoangDieuTrung-Software Developer.pdf" download={true}>
+								CV
+							</Link>
+						</li>
 					</ul>
 
 					<div className="bg-slate-100 rounded-md p-3 my-5 cursor-pointer transition-all">
