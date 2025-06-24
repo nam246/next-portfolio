@@ -73,14 +73,6 @@ pre {
   overflow: hidden;
 }
 
-.gallery .item .img {
-  transition: all .25s ease-in-out;
-}
-
-.gallery .item:hover .img {
-  transform: scale(1.2);
-}
-
 @media (max-width: 600px) {
   .container {
     padding: 1.25rem;

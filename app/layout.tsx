@@ -29,7 +29,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <div className="container mx-auto lg:p-20 min-h-screen">
+        <div className="container mx-auto min-h-screen">
           <Header />
           {children}
           <Footer />
