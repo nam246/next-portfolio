@@ -57,7 +57,7 @@ export default function Projects() {
 			name: "computer-demo-13.vercel.app",
 			description: "",
 			url: "https://computer-demo-13.vercel.app/",
-			image: "/gallery/Screenshot 2025-06-21 135850.png",
+			image: "/gallery/computer-demo-12.png",
 			techstack: ["NextJS", "ES6", "TypeScript", "TailwindCSS"],
 		},
 	];
