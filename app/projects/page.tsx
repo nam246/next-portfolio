@@ -53,6 +53,13 @@ export default function Projects() {
 			image: "/gallery/Screenshot 2025-06-21 135850.png",
 			techstack: ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"],
 		},
+		{
+			name: "computer-demo-13.vercel.app",
+			description: "",
+			url: "https://computer-demo-13.vercel.app/",
+			image: "/gallery/Screenshot 2025-06-21 135850.png",
+			techstack: ["NextJS", "ES6", "TypeScript", "TailwindCSS"],
+		},
 	];
 
 	return (
