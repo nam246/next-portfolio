@@ -40,6 +40,13 @@ export default function Projects() {
 			],
 		},
 		{
+			name: "Thời khóa biểu của tôi",
+			description: "Ứng dụng thời khóa biểu Local dùng để track thông tin học",
+			url: "https://mytkb.up.railway.app/",
+			image: "/gallery/cdhome.png",
+			techstack: ["NextJS 15", "Shadcn UI", "TailwindCSS", "SQLite", "Prisma ORM"],
+		},
+		{
 			name: "cdhome.vn",
 			description: "",
 			url: "http://demolp.free.nf/",
