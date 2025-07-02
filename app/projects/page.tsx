@@ -43,7 +43,7 @@ export default function Projects() {
 			name: "Thời khóa biểu của tôi",
 			description: "Ứng dụng thời khóa biểu Local dùng để track thông tin học",
 			url: "https://mytkb.up.railway.app/",
-			image: "/gallery/cdhome.png",
+			image: "/gallery/demo-tkb-thumbnail.png",
 			techstack: ["NextJS 15", "Shadcn UI", "TailwindCSS", "SQLite", "Prisma ORM"],
 		},
 		{
@@ -65,7 +65,7 @@ export default function Projects() {
 			description: "",
 			url: "https://computer-demo-13.vercel.app/",
 			image: "/gallery/computer-demo-12.png",
-			techstack: ["NextJS", "ES6", "TypeScript", "TailwindCSS"],
+			techstack: ["NextJS", "ES6", "TypeScript", "TailwindCSS, Payload CMS, PostgresSQL"],
 		},
 	];
 
