@@ -1,6 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import {
+	Pagination,
+	PaginationContent,
+	PaginationEllipsis,
+	PaginationItem,
+	PaginationLink,
+	PaginationNext,
+	PaginationPrevious,
+} from "@/components/ui/pagination";
+import { Badge } from "@/components/ui/badge";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card";
+
 import { ExternalLink } from "lucide-react";
 
 export default function Projects() {
@@ -61,63 +80,97 @@ export default function Projects() {
 			techstack: ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"],
 		},
 		{
-			name: "computer-demo-13.vercel.app",
+			name: "E-centre computer shop",
 			description: "",
 			url: "https://computer-demo-13.vercel.app/",
 			image: "/gallery/computer-demo-12.png",
-			techstack: ["NextJS", "ES6", "TypeScript", "TailwindCSS, Payload CMS, PostgresSQL"],
+			techstack: [
+				"NextJS",
+				"ES6",
+				"TypeScript",
+				"TailwindCSS",
+				"Payload CMS",
+				"PostgresSQL",
+			],
 		},
 	];
 
 	return (
-		<div className="wrapper">
+		<main className="wrapper">
 			<div className="page-header">
 				<h1>PROJECTS</h1>
 			</div>
-			<div className="gallery grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div className="gallery grid grid-cols-1 md:grid-cols-2 gap-6 py-5">
 				{items.map((item, index) => (
-					<div
-						key={index}
-						className="item rounded-xl overflow-hidden border border-sky-100 shadow-lg bg-white hover:shadow-2xl transition-all duration-200 flex flex-col"
-					>
-						<figure className="img overflow-hidden">
-							<Image
-								className="hover:scale-105 transition-transform duration-300 rounded-t-xl"
-								src={item.image}
-								alt={item.name}
-								width={500}
-								height={200}
-							/>
-						</figure>
-						<div className="p-4 flex-1 flex flex-col justify-between">
-							<h2 className="font-bold text-lg text-sky-700 mb-2 truncate">
-								{item.name}
-							</h2>
-							<div className="flex items-center gap-2 flex-wrap mb-3">
-								{item.techstack.map((tech, i) => (
-									<div
-										key={i}
-										className="bg-sky-500 text-white text-xs rounded-2xl py-1 px-2 hover:bg-sky-400 transition-colors"
+					<Card key={index}>
+						<CardHeader>
+							<CardTitle>
+								{item.url ? (
+									<Link
+										href={item.url}
+										className="text-black hover:text-red-500 transition-colors"
+										target="_blank"
+										rel="noopener noreferrer"
 									>
+										{item.name}
+										<ExternalLink className="inline ml-1 align-top" size={15} />
+									</Link>
+								) : (
+									item.name
+								)}
+							</CardTitle>
+							<CardDescription>
+								{item.description ? item.description : `${"demo " + item.name}`}
+							</CardDescription>
+						</CardHeader>
+						<CardContent>
+							<figure className="img overflow-hidden">
+								<Image
+									className="hover:scale-105 transition-transform duration-300 rounded-t-xl"
+									src={item.image}
+									alt={item.name}
+									width={500}
+									height={200}
+								/>
+							</figure>
+						</CardContent>
+						<CardFooter className="flex flex-col gap-2 items-start">
+							<div className="flex gap-2 flex-wrap">
+								{item.techstack.map((tech, i) => (
+									<Badge key={i} variant="destructive">
 										{tech}
-									</div>
+									</Badge>
 								))}
 							</div>
-							{item.url && (
-								<Link
-									href={item.url}
-									className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-sky-50 text-sky-700 font-medium border border-sky-200 hover:bg-sky-100 hover:text-sky-900 transition-colors w-max mt-auto"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<ExternalLink size={15} />
-									Demo
-								</Link>
-							)}
-						</div>
-					</div>
+						</CardFooter>
+					</Card>
 				))}
 			</div>
-		</div>
+
+			<Pagination>
+				<PaginationContent>
+					<PaginationItem>
+						<PaginationPrevious href="#" />
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationLink href="#">1</PaginationLink>
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationLink href="#" isActive>
+							2
+						</PaginationLink>
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationLink href="#">3</PaginationLink>
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationEllipsis />
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationNext href="#" />
+					</PaginationItem>
+				</PaginationContent>
+			</Pagination>
+		</main>
 	);
 }

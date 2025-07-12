@@ -1,0 +1,10 @@
+{
+  "HomePage": {
+    "title": "Chào mừng đến với website của chúng tôi",
+    "description": "Đây là trang chủ"
+  },
+  "Navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu"
+  }
+}

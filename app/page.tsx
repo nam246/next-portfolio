@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GitBranch, Mail, Paperclip, Smartphone } from "lucide-react";
 
 export default function Homepage() {
 	const information = {
@@ -47,7 +48,7 @@ export default function Homepage() {
 	};
 
 	return (
-		<div className="wrapper">
+		<main className="wrapper">
 			<div className="section mb-3 flex flex-col lg:flex-row justify-between align-start gap-5">
 				<div className="flex-1">
 					<figure>
@@ -56,21 +57,20 @@ export default function Homepage() {
 					<h1 className="uppercase">{information.name}</h1>
 					<ul className="list-none ps-0">
 						<li>
-							<i className="fa-solid fa-envelope"></i> Email:{" "}
+							<Mail className="inline mr-1 align-top" /> Email:{" "}
 							<Link href={"mailto:" + information.email}>{information.email}</Link>
 						</li>
 						<li>
-							<i className="fa-solid fa-phone"></i> Phone number:{" "}
+							<Smartphone className="inline mr-1 align-top" /> Phone number:{" "}
 							<Link href={"tel:" + information.phoneNumber}>
 								{information.phoneNumber}
 							</Link>
 						</li>
 						<li>
-							<i className="fa-brands fa-github"></i>{" "}
-							<Link href={information.github}>Github</Link>
+							<GitBranch className="inline mr-1 align-top" /> <Link href={information.github}>Github</Link>
 						</li>
 						<li>
-							<i className="fa-solid fa-paperclip"></i>{" "}
+							<Paperclip className="inline mr-1 align-top" />{" "}
 							<Link href="/VuHoangDieuTrung-Software Developer.pdf" download={true}>
 								CV
 							</Link>
@@ -96,7 +96,7 @@ export default function Homepage() {
 						(cơ bản).
 					</li>
 					<li className="">
-						<b>Frontend: </b>HTML, CSS (SASS, LESS, Bootstrap, TailwindCSS), JQuery,
+						<b>Frontend: </b>HTML, CSS (SASS, LESS, Bootstrap 5, TailwindCSS), JQuery,
 						ReactJS, NextJS.
 					</li>
 					<li className="">
@@ -109,7 +109,8 @@ export default function Homepage() {
 						<b>Tools: </b>Docker, Git, Postman, Figma.
 					</li>
 					<li className="">
-						<b>More: </b>Wordpress, Strapi, Restful API, JWT Auth, SEO cơ bản.
+						<b>More: </b>Wordpress, Payload Headless CMS, Restful API, JWT Auth, SEO
+						cơ bản.
 					</li>
 				</ul>
 			</div>
@@ -125,6 +126,7 @@ export default function Homepage() {
 						<div className="mb-3 text-gray-600">6/2025 - now</div>
 						<ul className="list-disc list-inside text-gray-700 ms-4">
 							<li>Phát triển website theo yêu cầu của công ty.</li>
+							<li>Làm việc theo yêu cầu cấp trên.</li>
 						</ul>
 					</div>
 
@@ -210,6 +212,6 @@ export default function Homepage() {
 					<li>Tiếng Nhật JLPT N5.</li>
 				</ul>
 			</div>
-		</div>
+		</main>
 	);
 }
