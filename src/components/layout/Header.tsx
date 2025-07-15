@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navigation from '@/components/layout/Navigation';
 export default function Header() {
     return (

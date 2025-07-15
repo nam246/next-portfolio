@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { Providers } from "./providers";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -29,11 +31,13 @@ export default async function RootLayout({
 				/>
 			</head>
 			<body className={inter.className}>
-				<div className="container mx-auto min-h-screen">
-					<Header />
-					{children}
-					<Footer />
-				</div>
+				<Providers>
+					<div className="container mx-auto min-h-screen">
+						<Header />
+						{children}
+						<Footer />
+					</div>
+				</Providers>
 			</body>
 		</html>
 	);

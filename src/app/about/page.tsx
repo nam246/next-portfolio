@@ -59,8 +59,8 @@ export default function About() {
 					<h2 className="text-lg font-semibold text-sky-700">Triết lý sống</h2>
 				</div>
 				<blockquote className="italic text-gray-600 border-l-4 border-sky-400 ps-4">
-					"Không ngừng học hỏi, không ngại thay đổi, luôn hướng tới giá trị thực sự
-					cho bản thân và cộng đồng."
+					&quot;Không ngừng học hỏi, không ngại thay đổi, luôn hướng tới giá trị thực
+					sự cho bản thân và cộng đồng.&quot;
 				</blockquote>
 			</div>
 		</main>
