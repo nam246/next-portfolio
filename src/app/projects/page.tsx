@@ -1,15 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-	Pagination,
-	PaginationContent,
-	PaginationEllipsis,
-	PaginationItem,
-	PaginationLink,
-	PaginationNext,
-	PaginationPrevious,
-} from "@/components/ui/pagination";
 import { Badge } from "@/components/ui/badge";
 import {
 	Card,
@@ -108,7 +99,7 @@ export default function Projects() {
 								{item.url ? (
 									<Link
 										href={item.url}
-										className="text-black dark:text-slate-100 hover:text-red-500 dark:hover:text-red-400 transition-colors"
+										className="hover:text-red-500 dark:hover:text-red-400 transition-colors"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
@@ -146,31 +137,6 @@ export default function Projects() {
 					</Card>
 				))}
 			</div>
-
-			<Pagination>
-				<PaginationContent>
-					<PaginationItem>
-						<PaginationPrevious href="#" />
-					</PaginationItem>
-					<PaginationItem>
-						<PaginationLink href="#">1</PaginationLink>
-					</PaginationItem>
-					<PaginationItem>
-						<PaginationLink href="#" isActive>
-							2
-						</PaginationLink>
-					</PaginationItem>
-					<PaginationItem>
-						<PaginationLink href="#">3</PaginationLink>
-					</PaginationItem>
-					<PaginationItem>
-						<PaginationEllipsis />
-					</PaginationItem>
-					<PaginationItem>
-						<PaginationNext href="#" />
-					</PaginationItem>
-				</PaginationContent>
-			</Pagination>
 		</main>
 	);
 }
