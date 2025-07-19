@@ -187,7 +187,7 @@ export default function Homepage() {
 						</li>
 					</ul>
 
-					<div className="rounded-md cursor-pointer">{information.bio}</div>
+					<p className="rounded-md">{information.bio}</p>
 				</div>
 
 				<div className="flex-1">
