@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HeroCarousel } from "@/components/layout/HeroCarousel";
 import { Download, GitBranch, Mail, Smartphone } from "lucide-react";
 
 const information = {
@@ -137,7 +138,7 @@ const SectionHeader = ({ icon, title }: { icon: string; title: string }) => (
 
 export default function Homepage() {
 	return (
-		<main className="wrapper">
+		<>
 			<div className="section mb-3 flex flex-col lg:flex-row justify-between align-start gap-5">
 				<div className="flex flex-col gap-3 flex-1">
 					<figure>
@@ -189,7 +190,9 @@ export default function Homepage() {
 					<div className="rounded-md cursor-pointer">{information.bio}</div>
 				</div>
 
-				<div className="flex-1"></div>
+				<div className="flex-1">
+					<HeroCarousel />
+				</div>
 			</div>
 
 			<div className="section mb-3">
@@ -252,6 +255,6 @@ export default function Homepage() {
 					))}
 				</ul>
 			</div>
-		</main>
+		</>
 	);
 }

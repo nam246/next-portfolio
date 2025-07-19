@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import { Providers } from "./providers";
+// import { Providers } from "./providers";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -20,7 +21,7 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang={`vi`}>
+		<html lang={`vi`} suppressHydrationWarning>
 			<head>
 				<link
 					rel="stylesheet"
@@ -31,13 +32,18 @@ export default async function RootLayout({
 				/>
 			</head>
 			<body className={inter.className}>
-				<Providers>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
 					<div className="container mx-auto min-h-screen">
 						<Header />
-						{children}
+						<main className="wrapper">{children}</main>
 						<Footer />
 					</div>
-				</Providers>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
