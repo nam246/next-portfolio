@@ -15,77 +15,7 @@ import { PageHeading } from "@/components/layout/PageHeading";
 
 import { ExternalLink } from "lucide-react";
 
-const projects = [
-	{
-		name: "bloodflame.vn",
-		url: "",
-		image: "/gallery/Screenshot1.png",
-		techstack: ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"],
-	},
-	{
-		name: "poohhousebridal.com",
-		url: "",
-		image: "/gallery/Screenshot2.png",
-		techstack: ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"],
-	},
-	{
-		name: "lepetitmusee.edu.vn",
-		description: "",
-		url: "https://lepetitmusee.edu.vn/",
-		image: "/gallery/Screenshot3.png",
-		techstack: ["PHP", "Bootstrap 5", "ES6", "JQuery", "AJAX", "MySQL"],
-	},
-	{
-		name: "acecafe.vn",
-		description: "",
-		url: "https://acecafe.vn/",
-		image: "/gallery/Screenshot4.png",
-		techstack: [
-			"PHP",
-			"Bootstrap 5",
-			"ES6",
-			"JQuery",
-			"AJAX",
-			"particle.js",
-			"MySQL",
-		],
-	},
-	{
-		name: "cdhome.vn",
-		description: "",
-		url: "http://demolp.free.nf/",
-		image: "/gallery/cdhome.png",
-		techstack: ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"],
-	},
-	{
-		name: "joyfuldecor.com.vn",
-		description: "",
-		url: "http://joyful.free.nf/",
-		image: "/gallery/Screenshot 2025-06-21 135850.png",
-		techstack: ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"],
-	},
-	{
-		name: "E-centre computer shop",
-		description: "",
-		url: "https://computer-demo-13.vercel.app/",
-		image: "/gallery/computer-demo-12.png",
-		techstack: [
-			"NextJS",
-			"ES6",
-			"TypeScript",
-			"TailwindCSS",
-			"Payload CMS",
-			"PostgresSQL",
-		],
-	},
-	{
-		name: "Thời khóa biểu của tôi",
-		description: "Ứng dụng thời khóa biểu Local dùng để track thông tin học",
-		url: "https://mytkb.up.railway.app/",
-		image: "/gallery/demo-tkb-thumbnail.png",
-		techstack: ["NextJS 15", "Shadcn UI", "TailwindCSS", "SQLite", "Prisma ORM"],
-	},
-];
+import { projects } from "@/lib/data";
 
 export default function Projects() {
 	return (
