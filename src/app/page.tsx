@@ -35,6 +35,7 @@ const information = {
 			title: "Kỹ năng IT Support",
 			description: [
 				"Hệ điều hành: Windows, Linux.",
+				"Microsoft Offices, Google Workspace",
 				"Xử lý sự cố kỹ thuật.",
 				"Công cụ hỗ trợ từ xa: TeamViewer, AnyDesk, Remote Desktop.",
 				"Bảo mật dữ liệu, phần mềm diệt virus, tường lửa.",

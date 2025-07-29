@@ -34,12 +34,12 @@ export function HeroCarousel() {
 					<CarouselItem key={index}>
 						<AspectRatio ratio={1 / 1}>
 							<Image
-								className="rounded-md"
+								className="rounded-md object-cover"
 								src={image.url}
-                loading="lazy"
+								loading="lazy"
 								alt={`carousel ${index}`}
 								fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 							/>
 						</AspectRatio>
 					</CarouselItem>
