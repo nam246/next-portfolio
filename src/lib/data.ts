@@ -20,7 +20,7 @@ export const information = {
 				"PHP (Laravel, Wordpress) cơ bản, Java (cơ bản), Python (cơ bản).",
 				"Kiến thức cơ bản về OOP.",
 				"Database: MySQL, PostgreSQL, SQLite, MSSQL (Cơ bản), Oracle (cơ bản).",
-				"SQL: DDL, DML, DCL, Lập trình thủ tục (PL/SQL, T-SQL).",
+				"SQL (DDL, DML, DCL, TCL), Lập trình thủ tục (PL/SQL, T-SQL).",
 				"RESTful API, HTTP protocol, JWT.",
 				"Kiến thức cơ bản về Docker, Docker Compose.",
 				"Công cụ khác: Postman, Github Actions, GitLab CI.",
@@ -29,7 +29,7 @@ export const information = {
 		{
 			title: "Kỹ năng IT Support",
 			description: [
-				"Hệ điều hành: Windows, Linux.",
+				"Hệ điều hành: Windows, Ubuntu, Fedora.",
 				"Microsoft Offices, Google Workspace",
 				"Xử lý sự cố kỹ thuật.",
 				"Công cụ hỗ trợ từ xa: TeamViewer, AnyDesk, Remote Desktop.",
@@ -48,10 +48,24 @@ export const information = {
 	experiences: [
 		{
 			position: "Frontend developer",
+			companyName: "G&G Fashion Co., Ltd",
+			companyWebsite: "",
+			startDate: "8/2025",
+			endDate: "now",
+			accomplishments: [
+				"Phát triển giao diện web sử dụng Vue, Ant design.",
+				"Hợp tác với team Backend để phát triển UI/UX cho phần mềm ERP Jeegc.",
+				"Bảo trì và sửa lỗi website.",
+				"Viết báo cáo tiến độ công việc hàng tuần.",
+				"Làm việc theo yêu cầu của cấp trên.",
+			],
+		},
+		{
+			position: "Frontend developer",
 			companyName: "Joyful Co., Ltd",
 			companyWebsite: "",
-			startDate: "6/2025",
-			endDate: "now",
+			startDate: "6/2024",
+			endDate: "8/2025",
 			accomplishments: [
 				"Phát triển giao diện web sử dụng PHP, HTML, CSS, SASS, Bootstrap, JQuery (AJAX), MySQL.",
 				"Hợp tác với team UI/UX để chuyển đổi thành giao diện người dùng responsive",
