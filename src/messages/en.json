@@ -1,10 +1,250 @@
 {
-  "HomePage": {
-    "title": "Welcome to our website",
-    "description": "This is the homepage"
-  },
-  "Navigation": {
-    "home": "Home",
-    "about": "About"
-  }
+	"meta": {
+		"name": "Vu Hoang Dieu Trung",
+		"email": "trungvuhoang2005@gmail.com",
+		"phoneNumber": "+84984041242",
+		"github": "https://github.com/nam246"
+	},
+	"bio": "Hi there! I'm Trung, an amateur Developer passionate about crafting amazing web experiences. With knowledge in JavaScript, React, PHP, and modern technologies, I specialize in building web applications from concept to finished product. I'm always looking for opportunities to learn new technologies and tackle interesting programming challenges.",
+	"nav": {
+		"home": "Home",
+		"about": "About",
+		"skills": "Skills",
+		"experience": "Experience",
+		"projects": "Projects",
+		"education": "Education",
+		"contact": "Contact"
+	},
+	"sections": {
+		"skills": "Skills",
+		"experience": "Work Experience",
+		"projects": "Projects",
+		"education": "Education",
+		"languages": "Languages",
+		"contact": "Contact"
+	},
+	"skills": [
+		{
+			"title": "Frontend Development",
+			"description": [
+				"Proficient: HTML5, CSS3, JavaScript (ES6+), TypeScript, Responsive Web Design.",
+				"Frameworks/Libraries: ReactJS, NextJS, jQuery, Bootstrap 5, TailwindCSS.",
+				"Design tools: Figma, Photoshop (Basic knowledge).",
+				"Version control: Git, GitHub, GitLab."
+			]
+		},
+		{
+			"title": "Backend Development & Database",
+			"description": [
+				"PHP (Laravel, WordPress) basic, Java (basic), Python (basic).",
+				"Basic knowledge of OOP.",
+				"Database: MySQL, PostgreSQL, SQLite, MSSQL (Basic), Oracle (basic).",
+				"SQL (DDL, DML, DCL, TCL), Procedural programming (PL/SQL, T-SQL).",
+				"RESTful API, HTTP protocol, JWT.",
+				"Basic knowledge of Docker, Docker Compose.",
+				"Other tools: Postman, GitHub Actions, GitLab CI."
+			]
+		},
+		{
+			"title": "IT Support Skills",
+			"description": [
+				"Operating systems: Windows, Linux.",
+				"Microsoft Office, Google Workspace.",
+				"Technical troubleshooting.",
+				"Remote support tools: TeamViewer, AnyDesk, Remote Desktop.",
+				"Data security, antivirus software, firewalls."
+			]
+		},
+		{
+			"title": "Soft Skills",
+			"description": [
+				"Effective teamwork.",
+				"Fast learner.",
+				"Time management and progress reporting."
+			]
+		}
+	],
+	"experiences": [
+		{
+			"position": "Frontend Developer",
+			"companyName": "G&G Fashion Co., Ltd",
+			"companyWebsite": "",
+			"startDate": "8/2025",
+			"endDate": "Present",
+			"accomplishments": [
+				"Developed web interfaces using Vue and Ant Design.",
+				"Collaborated with the Backend team to develop UI/UX for the ERP software Jeegc.",
+				"Maintained and debugged websites.",
+				"Wrote weekly work progress reports.",
+				"Worked on tasks assigned by superiors."
+			]
+		},
+		{
+			"position": "Frontend Developer",
+			"companyName": "Joyful Co., Ltd",
+			"companyWebsite": "",
+			"startDate": "6/2024",
+			"endDate": "8/2025",
+			"accomplishments": [
+				"Developed web interfaces using PHP, HTML, CSS, SASS, Bootstrap, jQuery (AJAX), and MySQL.",
+				"Collaborated with the UI/UX team to convert designs into responsive user interfaces.",
+				"Optimized websites for mobile devices using Media Queries and Bootstrap.",
+				"Provided customer support for website hosting and domain pointing.",
+				"Maintained and debugged websites.",
+				"Wrote weekly work progress reports.",
+				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
+				"Worked on tasks assigned by superiors."
+			]
+		},
+		{
+			"position": "Frontend Developer",
+			"companyName": "Sikido Media & Advertising Inc.",
+			"companyWebsite": "",
+			"startDate": "11/2022",
+			"endDate": "5/2024",
+			"accomplishments": [
+				"Developed web interfaces using PHP, HTML, CSS, SASS, Bootstrap, jQuery (AJAX), and MySQL.",
+				"Collaborated with the UI/UX team to convert designs into responsive user interfaces.",
+				"Optimized websites for mobile devices using Media Queries and Bootstrap.",
+				"Provided customer support for website hosting and domain pointing.",
+				"Maintained and debugged websites.",
+				"Wrote weekly work progress reports.",
+				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
+				"Worked on tasks assigned by superiors."
+			]
+		},
+		{
+			"position": "Computer Technician",
+			"companyName": "Vien Dong Computer Ltd.",
+			"companyWebsite": "",
+			"startDate": "5/2022",
+			"endDate": "11/2022",
+			"accomplishments": [
+				"Assembled computers according to customer requirements.",
+				"Installed Windows and software as needed.",
+				"Diagnosed and resolved hardware and software issues.",
+				"Supported customers at the office with computer-related problems.",
+				"Worked on tasks assigned by superiors."
+			]
+		}
+	],
+	"education": [
+		{
+			"university": "University of Information Technology - UIT",
+			"major": "Information Technology",
+			"degrees": "Bachelor's Degree (Advanced Standing)",
+			"startDate": "2024",
+			"endDate": "Present",
+			"achievements": []
+		},
+		{
+			"university": "Ho Chi Minh City University of Industry - IUH",
+			"major": "Information Technology",
+			"degrees": "Associate Degree",
+			"startDate": "2020",
+			"endDate": "2022",
+			"achievements": []
+		}
+	],
+	"languages": [
+		{
+			"name": "English",
+			"proficiency": "TOEIC 680 (Listening & Reading), Basic conversational skills."
+		},
+		{
+			"name": "Japanese",
+			"proficiency": "JLPT N5."
+		}
+	],
+	"projects": [
+		{
+			"name": "bloodflame.vn",
+			"description": "E-commerce website.",
+			"url": "",
+			"image": "/gallery/Screenshot1.png",
+			"techstack": ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"]
+		},
+		{
+			"name": "poohhousebridal.com",
+			"description": "Wedding services website.",
+			"url": "",
+			"image": "/gallery/Screenshot2.png",
+			"techstack": ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"]
+		},
+		{
+			"name": "lepetitmusee.edu.vn",
+			"description": "School website.",
+			"url": "https://lepetitmusee.edu.vn/",
+			"image": "/gallery/Screenshot3.png",
+			"techstack": ["PHP", "Bootstrap 5", "ES6", "JQuery", "AJAX", "MySQL"]
+		},
+		{
+			"name": "acecafe.vn",
+			"description": "Café website.",
+			"url": "https://acecafe.vn/",
+			"image": "/gallery/Screenshot4.png",
+			"techstack": [
+				"PHP",
+				"Bootstrap 5",
+				"ES6",
+				"JQuery",
+				"AJAX",
+				"particle.js",
+				"MySQL"
+			]
+		},
+		{
+			"name": "cdhome.vn",
+			"description": "Furniture & interior design website.",
+			"url": "http://demolp.free.nf/",
+			"image": "/gallery/cdhome.png",
+			"techstack": ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"]
+		},
+		{
+			"name": "joyfuldecor.com.vn",
+			"description": "Interior decoration website.",
+			"url": "http://joyful.free.nf/",
+			"image": "/gallery/Screenshot 2025-06-21 135850.png",
+			"techstack": ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"]
+		},
+		{
+			"name": "E-centre computer shop",
+			"description": "Computer shop website.",
+			"url": "https://computer-demo-13.vercel.app/",
+			"image": "/gallery/computer-demo-12.png",
+			"techstack": [
+				"NextJS",
+				"ES6",
+				"TypeScript",
+				"TailwindCSS",
+				"Payload CMS",
+				"PostgresSQL"
+			]
+		},
+		{
+			"name": "My Timetable",
+			"description": "A local timetable app for tracking study schedule and information.",
+			"url": "https://thoi-khoa-bieu.onrender.com/",
+			"image": "/gallery/demo-tkb-thumbnail.png",
+			"techstack": [
+				"NextJS 15",
+				"Shadcn UI",
+				"TailwindCSS",
+				"SQLite",
+				"Prisma ORM"
+			]
+		}
+	],
+	"ui": {
+		"present": "Present",
+		"viewProject": "View Project",
+		"viewGithub": "View GitHub",
+		"techstack": "Tech Stack",
+		"accomplishments": "Key Accomplishments",
+		"downloadCV": "Download CV",
+		"contactMe": "Contact Me",
+		"readMore": "Read More",
+		"close": "Close",
+		"major": "Major"
+	}
 }
