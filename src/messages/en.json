@@ -48,7 +48,7 @@
 		{
 			"title": "IT Support Skills",
 			"description": [
-				"Operating systems: Windows, Linux.",
+				"Operating systems: Windows, Windows Server, Linux.",
 				"Microsoft Office, Google Workspace.",
 				"Technical troubleshooting.",
 				"Remote support tools: TeamViewer, AnyDesk, Remote Desktop.",
@@ -66,21 +66,46 @@
 	],
 	"experiences": [
 		{
+			"position": "IT Staff",
+			"companyName": "Huynh Duc manufacturing trading service company limited",
+			"companyWebsite": "huynhduc.vn",
+			"startDate": "12/2025",
+			"endDate": "2/2025",
+			"accomplishments": [
+				"Helpdesk",
+				"Networking",
+				"IT facilities management"
+			],
+			"resignationReason": ""
+		},
+		{
+			"position": "Frontend Developer",
+			"companyName": "Fashion Garment Co., Ltd",
+			"companyWebsite": "",
+			"startDate": "12/2025",
+			"endDate": "2/2025",
+			"accomplishments": [
+				"Developed web application interfaces using ASP.NET for internal using.",
+			],
+			"resignationReason": "Layoff (not suitable after testing skill)"
+		},
+		{
 			"position": "Frontend Developer",
 			"companyName": "G&G Fashion Co., Ltd",
 			"companyWebsite": "",
 			"startDate": "8/2025",
-			"endDate": "Present",
+			"endDate": "12/2025",
 			"accomplishments": [
 				"Developed web interfaces using Vue and Ant Design.",
 				"Collaborated with the Backend team to develop UI/UX for the ERP software Jeegc.",
 				"Maintained and debugged websites.",
 				"Wrote weekly work progress reports.",
 				"Worked on tasks assigned by superiors."
-			]
+			],
+			"resignationReason": "By a mistake."
 		},
 		{
-			"position": "Frontend Developer",
+			"position": "IT",
 			"companyName": "Joyful Co., Ltd",
 			"companyWebsite": "",
 			"startDate": "6/2024",
@@ -94,7 +119,8 @@
 				"Wrote weekly work progress reports.",
 				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
 				"Worked on tasks assigned by superiors."
-			]
+			],
+			"resignationReason": "Working outside of one's area of expertise."
 		},
 		{
 			"position": "Frontend Developer",
@@ -111,7 +137,8 @@
 				"Wrote weekly work progress reports.",
 				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
 				"Worked on tasks assigned by superiors."
-			]
+			],
+			"resignationReason": "Find new chance"
 		},
 		{
 			"position": "Computer Technician",
@@ -125,7 +152,8 @@
 				"Diagnosed and resolved hardware and software issues.",
 				"Supported customers at the office with computer-related problems.",
 				"Worked on tasks assigned by superiors."
-			]
+			],
+			"resignationReason": "Find new chance"
 		}
 	],
 	"education": [
@@ -134,7 +162,7 @@
 			"major": "Information Technology",
 			"degrees": "Bachelor's Degree (Advanced Standing)",
 			"startDate": "2024",
-			"endDate": "Present",
+			"endDate": "2026",
 			"achievements": []
 		},
 		{
@@ -142,7 +170,7 @@
 			"major": "Information Technology",
 			"degrees": "Associate Degree",
 			"startDate": "2020",
-			"endDate": "2022",
+			"endDate": "2023",
 			"achievements": []
 		}
 	],
@@ -165,7 +193,7 @@
 			"techstack": ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"]
 		},
 		{
-			"name": "poohhousebridal.com",
+			"name": "https://demolp.free.nf",
 			"description": "Wedding services website.",
 			"url": "",
 			"image": "/gallery/Screenshot2.png",
@@ -202,7 +230,7 @@
 		},
 		{
 			"name": "joyfuldecor.com.vn",
-			"description": "Interior decoration website.",
+			"description": "Interior decoration company website demo.",
 			"url": "http://joyful.free.nf/",
 			"image": "/gallery/Screenshot 2025-06-21 135850.png",
 			"techstack": ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"]
