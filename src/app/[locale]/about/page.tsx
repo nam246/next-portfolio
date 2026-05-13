@@ -45,14 +45,33 @@ export default function About() {
 				<div className="flex items-center gap-2 mb-2">
 					<span className="text-xl">💡</span>
 					<h2 className="text-lg font-semibold text-sky-700">
+						Diem manh & Diem yeu
+					</h2>
+				</div>
+				<ul className="list-disc list-inside space-y-1 ms-4">
+					<li>Ham hoc hoi, cap nhat cac cong nghe moi.</li>
+					<li>Co kien thuc ve phan cung va phan mem.</li>
+					<li>Hoa dong, kien nhan.</li>
+				</ul>
+				<ul className="list-disc list-inside space-y-1 ms-4">
+					<li>Qua' tap trung vao tieu tiet, nen bi tri hoan.</li>
+					<li>Doi khi con` thieu tap trung.</li>
+					<li>Thieu tu tin, it giao tiep.</li>
+				</ul>
+			</div>
+
+			<div className="section mb-6">
+				<div className="flex items-center gap-2 mb-2">
+					<span className="text-xl">💡</span>
+					<h2 className="text-lg font-semibold text-sky-700">
 						Sở thích & Cuộc sống
 					</h2>
 				</div>
-				<ul className="list-disc list-inside 	space-y-1 ms-4">
-					<li>Đọc sách về công nghệ, phát triển bản thân.</li>
-					<li>Tham gia các cộng đồng lập trình, chia sẻ kiến thức.</li>
-					<li>Chơi thể thao, đặc biệt là bóng đá và cầu lông.</li>
-					<li>Thích du lịch, khám phá văn hóa mới.</li>
+				<ul className="list-disc list-inside space-y-1 ms-4">
+					<li>Coding, research, learn new technology.</li>
+					<li>Chillin at coffee shop.</li>
+					<li>Gaming, read newspaper and coffee.</li>
+					<li>Playing guitar and learn languages.</li>
 				</ul>
 			</div>
 
