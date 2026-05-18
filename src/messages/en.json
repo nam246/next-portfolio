@@ -66,30 +66,6 @@
 	],
 	"experiences": [
 		{
-			"position": "IT Staff",
-			"companyName": "Huynh Duc manufacturing trading service company limited",
-			"companyWebsite": "huynhduc.vn",
-			"startDate": "12/2025",
-			"endDate": "2/2025",
-			"accomplishments": [
-				"Helpdesk",
-				"Networking",
-				"IT facilities management"
-			],
-			"resignationReason": ""
-		},
-		{
-			"position": "Frontend Developer",
-			"companyName": "Fashion Garment Co., Ltd",
-			"companyWebsite": "",
-			"startDate": "12/2025",
-			"endDate": "2/2025",
-			"accomplishments": [
-				"Developed web application interfaces using ASP.NET for internal using.",
-			],
-			"resignationReason": "Layoff (not suitable after testing skill)"
-		},
-		{
 			"position": "Frontend Developer",
 			"companyName": "G&G Fashion Co., Ltd",
 			"companyWebsite": "",
@@ -101,8 +77,7 @@
 				"Maintained and debugged websites.",
 				"Wrote weekly work progress reports.",
 				"Worked on tasks assigned by superiors."
-			],
-			"resignationReason": "By a mistake."
+			]
 		},
 		{
 			"position": "IT",
@@ -119,8 +94,7 @@
 				"Wrote weekly work progress reports.",
 				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
 				"Worked on tasks assigned by superiors."
-			],
-			"resignationReason": "Working outside of one's area of expertise."
+			]
 		},
 		{
 			"position": "Frontend Developer",
@@ -137,8 +111,7 @@
 				"Wrote weekly work progress reports.",
 				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
 				"Worked on tasks assigned by superiors."
-			],
-			"resignationReason": "Find new chance"
+			]
 		},
 		{
 			"position": "Computer Technician",
@@ -152,8 +125,7 @@
 				"Diagnosed and resolved hardware and software issues.",
 				"Supported customers at the office with computer-related problems.",
 				"Worked on tasks assigned by superiors."
-			],
-			"resignationReason": "Find new chance"
+			]
 		}
 	],
 	"education": [
