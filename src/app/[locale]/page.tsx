@@ -58,7 +58,7 @@ export default function Homepage() {
 						</figure>
 						<h1 className='uppercase font-bold text-2xl'>{meta.name}</h1>
 						<ul className='list-none ps-0'>
-							<li className='mb-3'>
+							{/* <li className='mb-3'>
 								<Link
 									className='hover:text-sky-500'
 									target='_blank'
@@ -76,7 +76,7 @@ export default function Homepage() {
 									<Smartphone className='inline mr-1 align-top' /> Phone number:{' '}
 									{meta.phoneNumber}
 								</Link>
-							</li>
+							</li> */}
 							<li className='mb-3'>
 								<Link className='hover:text-sky-500' target='_blank' href={meta.github}>
 									<GitBranch className='inline mr-1 align-top' />
