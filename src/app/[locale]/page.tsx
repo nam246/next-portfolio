@@ -77,7 +77,7 @@ export default function Homepage() {
 									{meta.phoneNumber}
 								</Link>
 							</li> */}
-							<li className='mb-3'>
+							{/* <li className='mb-3'>
 								<Link className='hover:text-sky-500' target='_blank' href={meta.github}>
 									<GitBranch className='inline mr-1 align-top' />
 									Github
@@ -92,7 +92,7 @@ export default function Homepage() {
 								>
 									<Download className='inline mr-1 align-top' /> {ui.downloadCV}
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 
 						<p className='rounded-md'>{t('bio')}</p>
