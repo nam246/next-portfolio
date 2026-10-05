@@ -1,99 +1,81 @@
 {
 	"meta": {
-		"name": "Vu Hoang Dieu Trung",
+		"name": "Vũ Hoàng Diệu Trung",
 		"email": "trungvuhoang2005@gmail.com",
 		"phoneNumber": "+84984041242",
-		"github": "https://github.com/nam246"
-	},
-	"bio": "Hi there! I'm Trung, an amateur Developer passionate about crafting amazing web experiences. With knowledge in JavaScript, React, PHP, and modern technologies, I specialize in building web applications from concept to finished product. I'm always looking for opportunities to learn new technologies and tackle interesting programming challenges.",
-	"nav": {
-		"home": "Home",
-		"about": "About",
-		"skills": "Skills",
-		"experience": "Experience",
-		"projects": "Projects",
-		"education": "Education",
-		"contact": "Contact"
-	},
-	"sections": {
-		"skills": "Skills",
-		"experience": "Work Experience",
-		"projects": "Projects",
-		"education": "Education",
-		"languages": "Languages",
-		"contact": "Contact"
+		"github": "https://github.com/nam246",
+		"summary": "Software Engineer with over 4 years of experience in web development and internal business systems. Experienced with ASP.NET Core, C#, Vue, React, Next.js, PHP/WordPress, and SQL database management systems. Has developed ERP systems and applications for digitizing internal processes, with a solid background in IT support, networking, and system troubleshooting. Capable of working end to end, from requirements analysis and feature development to maintenance and user support."
 	},
 	"skills": [
 		{
 			"title": "Frontend Development",
 			"description": [
-				"Proficient: HTML5, CSS3, JavaScript (ES6+), TypeScript, Responsive Web Design.",
-				"Frameworks/Libraries: ReactJS, NextJS, jQuery, Bootstrap 5, TailwindCSS.",
-				"Design tools: Figma, Photoshop (Basic knowledge).",
-				"Version control: Git, GitHub, GitLab."
+				"Core: HTML5, CSS3, SASS, JavaScript (ES6+), TypeScript, Responsive Web Design.",
+				"Frameworks/Libraries: React, Next.js, Vue, jQuery (AJAX), Bootstrap 5, Tailwind CSS, Ant Design, Shadcn UI, Payload CMS.",
+				"Design tools: Figma, Photoshop.",
+				"Version control: Git."
 			]
 		},
 		{
-			"title": "Backend Development & Database",
+			"title": "Backend & Database Development",
 			"description": [
-				"PHP (Laravel, WordPress) basic, Java (basic), Python (basic).",
-				"Basic knowledge of OOP.",
-				"Database: MySQL, PostgreSQL, SQLite, MSSQL (Basic), Oracle (basic).",
-				"SQL (DDL, DML, DCL, TCL), Procedural programming (PL/SQL, T-SQL).",
+				"Languages/Frameworks: C# (ASP.NET Core), PHP (Laravel, WordPress), Java, Python.",
+				"ORM: Entity Framework Core, Prisma ORM.",
+				"Databases: MySQL, PostgreSQL, SQLite, MSSQL, Oracle.",
+				"SQL (DDL, DML, DCL, TCL), procedural programming (PL/SQL, T-SQL).",
 				"RESTful API, HTTP protocol, JWT.",
-				"Basic knowledge of Docker, Docker Compose.",
-				"Other tools: Postman, GitHub Actions, GitLab CI."
+				"Docker, Docker Compose (basic knowledge). CI/CD: GitHub Actions, GitLab CI.",
+				"Other tools: Postman."
 			]
 		},
 		{
 			"title": "IT Support Skills",
 			"description": [
-				"Operating systems: Windows, Windows Server, Linux.",
+				"Operating systems: Windows, Linux (installation, configuration, troubleshooting).",
+				"Networking (basic): TCP/IP, IP addressing, subnet mask, DNS, DHCP, VLAN; configuring routers, switches, LAN/Wi-Fi networks; diagnosing network issues with ping, tracert, ipconfig/ifconfig, nslookup.",
 				"Microsoft Office, Google Workspace.",
-				"Technical troubleshooting.",
+				"Troubleshooting hardware, software, operating system, and network issues.",
 				"Remote support tools: TeamViewer, AnyDesk, Remote Desktop.",
-				"Data security, antivirus software, firewalls."
+				"Data security, antivirus software, firewalls.",
+				"Website hosting support and domain pointing (DNS records)."
 			]
 		},
 		{
 			"title": "Soft Skills",
 			"description": [
-				"Effective teamwork.",
-				"Fast learner.",
-				"Time management and progress reporting."
+				"Effective teamwork and good coordination between Frontend, Backend, and UI/UX teams.",
+				"Fast self-learner (self-taught ASP.NET Core and Next.js, and built full-stack applications).",
+				"Time management and regular progress reporting."
 			]
 		}
 	],
 	"experiences": [
 		{
-			"position": "Frontend Developer",
-			"companyName": "G&G Fashion Co., Ltd",
+			"position": "Software Engineer",
+			"companyName": "Hirdaramani FGL",
 			"companyWebsite": "",
-			"startDate": "8/2025",
-			"endDate": "12/2025",
+			"startDate": "12/2025",
+			"endDate": "6/2026",
 			"accomplishments": [
-				"Developed web interfaces using Vue and Ant Design.",
-				"Collaborated with the Backend team to develop UI/UX for the ERP software Jeegc.",
-				"Maintained and debugged websites.",
-				"Wrote weekly work progress reports.",
-				"Worked on tasks assigned by superiors."
+				"Developed and maintained internal web applications using ASP.NET Core, HTML, CSS, and JavaScript to support the company's digital transformation projects.",
+				"Built user interfaces and interactive features to improve usability and workflow efficiency for internal staff.",
+				"Implemented CRUD operations and business logic layers to handle data for internal digitalization systems.",
+				"Worked directly with stakeholders to gather requirements and translate business needs into software features.",
+				"Continuously supported and updated internal applications based on user feedback and changes in business processes."
 			]
 		},
 		{
-			"position": "IT",
-			"companyName": "Joyful Co., Ltd",
+			"position": "Frontend Developer",
+			"companyName": "G&G Fashion Co., Ltd",
 			"companyWebsite": "",
 			"startDate": "6/2024",
 			"endDate": "8/2025",
 			"accomplishments": [
-				"Developed web interfaces using PHP, HTML, CSS, SASS, Bootstrap, jQuery (AJAX), and MySQL.",
-				"Collaborated with the UI/UX team to convert designs into responsive user interfaces.",
-				"Optimized websites for mobile devices using Media Queries and Bootstrap.",
-				"Provided customer support for website hosting and domain pointing.",
-				"Maintained and debugged websites.",
-				"Wrote weekly work progress reports.",
-				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
-				"Worked on tasks assigned by superiors."
+				"Developed and maintained the interfaces of ERP business modules using Vue and Ant Design.", 
+				"Integrated REST APIs with the backend, and handled data entry, search, filtering, and data management flows.",
+				"Worked closely with the Backend team to design and implement UI/UX for the ERP system's business modules.",
+				"Maintained and fixed bugs in the ERP system, improved user experience, and reduced errors occurring during use.",
+				"Reported work progress to management on a weekly basis."
 			]
 		},
 		{
@@ -103,28 +85,27 @@
 			"startDate": "11/2022",
 			"endDate": "5/2024",
 			"accomplishments": [
-				"Developed web interfaces using PHP, HTML, CSS, SASS, Bootstrap, jQuery (AJAX), and MySQL.",
-				"Collaborated with the UI/UX team to convert designs into responsive user interfaces.",
+				"Built client websites using PHP (WordPress), HTML, CSS, SASS, Bootstrap, jQuery (AJAX), and MySQL.",
+				"Developed reusable blocks/components with React to shorten delivery time and ensure consistent interfaces across projects.",
+				"Collaborated with the UI/UX team to convert designs into responsive interfaces.",
 				"Optimized websites for mobile devices using Media Queries and Bootstrap.",
-				"Provided customer support for website hosting and domain pointing.",
-				"Maintained and debugged websites.",
-				"Wrote weekly work progress reports.",
-				"Self-studied additional technologies after work hours to support the technical department's expansion as requested by the department head.",
-				"Worked on tasks assigned by superiors."
+				"Supported clients with website hosting and domain pointing.",
+				"Maintained and fixed bugs in websites, and reported progress weekly.",
+				"Proactively researched new technologies outside working hours (React Native) to expand the department's technical capabilities, in line with the department head's direction."
 			]
 		},
 		{
 			"position": "Computer Technician",
-			"companyName": "Vien Dong Computer Ltd.",
+			"companyName": "Viễn Đông Computer Ltd.",
 			"companyWebsite": "",
 			"startDate": "5/2022",
 			"endDate": "11/2022",
 			"accomplishments": [
-				"Assembled computers according to customer requirements.",
-				"Installed Windows and software as needed.",
-				"Diagnosed and resolved hardware and software issues.",
-				"Supported customers at the office with computer-related problems.",
-				"Worked on tasks assigned by superiors."
+				"Assembled computers according to customers' configurations and needs.",
+				"Installed Windows and software on request.",
+				"Inspected, diagnosed, and fixed hardware and software issues.",
+				"Supported customers at their offices in resolving computer problems.",
+				"Worked with colleagues to install and configure routers, switches, and LAN networks (including VLAN segmentation) for nearby businesses, with 50+ machines."
 			]
 		}
 	],
@@ -132,24 +113,24 @@
 		{
 			"university": "University of Information Technology - UIT",
 			"major": "Information Technology",
-			"degrees": "Bachelor's Degree (Advanced Standing)",
+			"degrees": "Bachelor's Degree (transfer program)",
 			"startDate": "2024",
-			"endDate": "2026",
+			"endDate": "Present",
 			"achievements": []
 		},
 		{
-			"university": "Ho Chi Minh City University of Industry - IUH",
+			"university": "Industrial University of Ho Chi Minh City - IUH",
 			"major": "Information Technology",
 			"degrees": "Associate Degree",
 			"startDate": "2020",
-			"endDate": "2023",
+			"endDate": "2022",
 			"achievements": []
 		}
 	],
-	"languages": [
+	"certifications": [
 		{
 			"name": "English",
-			"proficiency": "TOEIC 680 (Listening & Reading), Basic conversational skills."
+			"proficiency": "TOEIC 680 (Listening & Reading), basic conversational."
 		},
 		{
 			"name": "Japanese",
@@ -158,6 +139,33 @@
 	],
 	"projects": [
 		{
+			"name": "My Timetable",
+			"description": "A local timetable app for tracking study schedules.",
+			"url": "https://thoi-khoa-bieu.onrender.com/",
+			"image": "/gallery/demo-tkb-thumbnail.png",
+			"techstack": [
+				"NextJS 15",
+				"Shadcn UI",
+				"TailwindCSS",
+				"SQLite",
+				"Prisma ORM"
+			]
+		},
+		{
+			"name": "Renshyuu Nihongo",
+			"description": "A Japanese language learning app.",
+			"url": "https://renshyuu-nihongo-fe.vercel.app/",
+			"image": "/gallery/demo-tkb-thumbnail.png",
+			"techstack": [
+				"NextJS 15",
+				"Shadcn UI",
+				"TailwindCSS",
+				"ASP.NET Core",
+				"PostgresSQL",
+				"Entity Framework Core"
+			]
+		},
+		{
 			"name": "bloodflame.vn",
 			"description": "E-commerce website.",
 			"url": "",
@@ -165,7 +173,7 @@
 			"techstack": ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"]
 		},
 		{
-			"name": "https://demolp.free.nf",
+			"name": "poohhousebridal.com",
 			"description": "Wedding services website.",
 			"url": "",
 			"image": "/gallery/Screenshot2.png",
@@ -180,7 +188,7 @@
 		},
 		{
 			"name": "acecafe.vn",
-			"description": "Café website.",
+			"description": "Coffee shop website.",
 			"url": "https://acecafe.vn/",
 			"image": "/gallery/Screenshot4.png",
 			"techstack": [
@@ -195,21 +203,21 @@
 		},
 		{
 			"name": "cdhome.vn",
-			"description": "Furniture & interior design website.",
+			"description": "Furniture website.",
 			"url": "http://demolp.free.nf/",
 			"image": "/gallery/cdhome.png",
 			"techstack": ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"]
 		},
 		{
 			"name": "joyfuldecor.com.vn",
-			"description": "Interior decoration company website demo.",
+			"description": "Interior decoration website.",
 			"url": "http://joyful.free.nf/",
 			"image": "/gallery/Screenshot 2025-06-21 135850.png",
 			"techstack": ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"]
 		},
 		{
 			"name": "E-centre computer shop",
-			"description": "Computer shop website.",
+			"description": "Computer store website.",
 			"url": "https://computer-demo-13.vercel.app/",
 			"image": "/gallery/computer-demo-12.png",
 			"techstack": [
@@ -220,27 +228,31 @@
 				"Payload CMS",
 				"PostgresSQL"
 			]
-		},
-		{
-			"name": "My Timetable",
-			"description": "A local timetable app for tracking study schedule and information.",
-			"url": "https://thoi-khoa-bieu.onrender.com/",
-			"image": "/gallery/demo-tkb-thumbnail.png",
-			"techstack": [
-				"NextJS 15",
-				"Shadcn UI",
-				"TailwindCSS",
-				"SQLite",
-				"Prisma ORM"
-			]
 		}
 	],
+	"nav": {
+		"home": "Home",
+		"about": "About",
+		"skills": "Skills",
+		"experience": "Experience",
+		"projects": "Projects",
+		"education": "Education",
+		"contact": "Contact"
+	},
+	"sections": {
+		"skills": "Skills",
+		"experience": "Work Experience",
+		"projects": "Projects",
+		"education": "Education",
+		"certifications": "Certifications",
+		"contact": "Contact"
+	},
 	"ui": {
 		"present": "Present",
 		"viewProject": "View Project",
 		"viewGithub": "View GitHub",
 		"techstack": "Tech Stack",
-		"accomplishments": "Key Accomplishments",
+		"accomplishments": "Responsibilities",
 		"downloadCV": "Download CV",
 		"contactMe": "Contact Me",
 		"readMore": "Read More",

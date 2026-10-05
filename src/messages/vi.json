@@ -1,99 +1,81 @@
 {
 	"meta": {
-		"name": "vũ hoàng diệu trung",
+		"name": "Vũ Hoàng Diệu Trung",
 		"email": "trungvuhoang2005@gmail.com",
 		"phoneNumber": "+84984041242",
-		"github": "https://github.com/nam246"
-	},
-	"bio": "Xin chào! Tôi là Trung, một Developer nghiệp dư, đam mê tạo ra những trải nghiệm web tuyệt vời. Với kiến thức về JavaScript, React, PHP và các công nghệ hiện đại, tôi chuyên xây dựng ứng dụng web từ ý tưởng đến sản phẩm hoàn thiện. Tôi luôn tìm kiếm cơ hội để học hỏi công nghệ mới và giải quyết những thách thức thú vị trong lập trình",
-	"nav": {
-		"home": "Trang chủ",
-		"about": "Giới thiệu",
-		"skills": "Kỹ năng",
-		"experience": "Kinh nghiệm",
-		"projects": "Dự án",
-		"education": "Học vấn",
-		"contact": "Liên hệ"
-	},
-	"sections": {
-		"skills": "Kỹ năng",
-		"experience": "Kinh nghiệm làm việc",
-		"projects": "Dự án",
-		"education": "Học vấn",
-		"languages": "Ngôn ngữ",
-		"contact": "Liên hệ"
+		"github": "https://github.com/nam246",
+		"summary": "Software Engineer với hơn 4 năm kinh nghiệm phát triển web và hệ thống nghiệp vụ nội bộ. Có kinh nghiệm với ASP.NET Core, C#, Vue, React, Next.js, PHP/WordPress và các hệ quản trị cơ sở dữ liệu SQL. Từng phát triển ERP và các ứng dụng phục vụ số hóa quy trình nội bộ, đồng thời có nền tảng IT Support, network và system troubleshooting. Có khả năng làm việc xuyên suốt từ phân tích yêu cầu, phát triển tính năng đến bảo trì và hỗ trợ người dùng."
 	},
 	"skills": [
 		{
 			"title": "Lập trình Frontend",
 			"description": [
-				"Thành thạo: HTML5, CSS3, JavaScript (ES6+), TypeScript, Responsive Web Design.",
-				"Frameworks/Libraries: ReactJS, NextJS, jQuery, Bootstrap 5, TailwindCSS.",
-				"Công cụ thiết kế: Figma, Photoshop (Kiến thức căn bản).",
-				"Kiểm soát phiên bản: Git, GitHub, GitLab."
+				"Core: HTML5, CSS3, SASS, JavaScript (ES6+), TypeScript, Responsive Web Design.",
+				"Frameworks/Libraries: React, Next.js, Vue, jQuery (AJAX), Bootstrap 5, Tailwind CSS, Ant Design, Shadcn UI, Payload CMS.",
+				"Công cụ thiết kế: Figma, Photoshop.",
+				"Kiểm soát phiên bản: Git."
 			]
 		},
 		{
 			"title": "Lập trình Backend & Database",
 			"description": [
-				"PHP (Laravel, Wordpress) cơ bản, Java (cơ bản), Python (cơ bản).",
-				"Kiến thức cơ bản về OOP.",
-				"Database: MySQL, PostgreSQL, SQLite, MSSQL (Cơ bản), Oracle (cơ bản).",
-				"SQL (DDL, DML, DCL, TCL), Lập trình thủ tục (PL/SQL, T-SQL).",
+				"Ngôn ngữ/Framework: C# (ASP.NET Core), PHP (Laravel, WordPress), Java, Python.",
+				"ORM: Entity Framework Core, Prisma ORM.",
+				"Database: MySQL, PostgreSQL, SQLite, MSSQL, Oracle.",
+				"SQL (DDL, DML, DCL, TCL), lập trình thủ tục (PL/SQL, T-SQL).",
 				"RESTful API, HTTP protocol, JWT.",
-				"Kiến thức cơ bản về Docker, Docker Compose.",
-				"Công cụ khác: Postman, Github Actions, GitLab CI."
+				"Docker, Docker Compose (kiến thức cơ bản). CI/CD: GitHub Actions, GitLab CI.",
+				"Công cụ khác: Postman."
 			]
 		},
 		{
 			"title": "Kỹ năng IT Support",
 			"description": [
-				"Hệ điều hành: Windows, Linux.",
-				"Microsoft Offices, Google Workspace.",
-				"Xử lý sự cố kỹ thuật.",
+				"Hệ điều hành: Windows, Linux (cài đặt, cấu hình, xử lý sự cố).",
+				"Network (cơ bản): TCP/IP, địa chỉ IP, subnet mask, DNS, DHCP, VLAN; cấu hình router, switch, mạng LAN/Wi-Fi; chẩn đoán lỗi mạng với ping, tracert, ipconfig/ifconfig, nslookup.",
+				"Microsoft Office, Google Workspace.",
+				"Xử lý sự cố phần cứng, phần mềm, hệ điều hành và mạng.",
 				"Công cụ hỗ trợ từ xa: TeamViewer, AnyDesk, Remote Desktop.",
-				"Bảo mật dữ liệu, phần mềm diệt virus, tường lửa."
+				"Bảo mật dữ liệu, phần mềm diệt virus, tường lửa.",
+				"Hỗ trợ website hosting và trỏ domain (DNS record)."
 			]
 		},
 		{
 			"title": "Kỹ năng mềm",
 			"description": [
-				"Làm việc nhóm hiệu quả.",
-				"Khả năng học hỏi nhanh.",
-				"Quản lý thời gian và báo cáo tiến độ."
+				"Làm việc nhóm hiệu quả, phối hợp tốt giữa team Frontend, Backend và UI/UX.",
+				"Khả năng tự học nhanh (tự học ASP.NET Core, Next.js và xây dựng ứng dụng full-stack).",
+				"Quản lý thời gian và báo cáo tiến độ định kỳ."
 			]
 		}
 	],
 	"experiences": [
 		{
-			"position": "Frontend Developer",
-			"companyName": "G&G Fashion Co., Ltd",
+			"position": "Software Engineer",
+			"companyName": "Hirdaramani FGL",
 			"companyWebsite": "",
-			"startDate": "8/2025",
-			"endDate": "Hiện tại",
+			"startDate": "12/2025",
+			"endDate": "6/2026",
 			"accomplishments": [
-				"Phát triển giao diện web sử dụng Vue, Ant design.",
-				"Hợp tác với team Backend để phát triển UI/UX cho phần mềm ERP Jeegc.",
-				"Bảo trì và sửa lỗi website.",
-				"Viết báo cáo tiến độ công việc hàng tuần.",
-				"Làm việc theo yêu cầu của cấp trên."
+				"Phát triển và bảo trì các ứng dụng web nội bộ bằng ASP.NET Core, HTML, CSS và JavaScript, phục vụ các dự án chuyển đổi số của công ty.",
+				"Xây dựng giao diện và các tính năng tương tác nhằm nâng cao tính dễ dùng và hiệu quả quy trình làm việc cho nhân viên nội bộ.",
+				"Triển khai các thao tác CRUD và tầng business logic để xử lý dữ liệu cho các hệ thống số hóa nội bộ.",
+				"Làm việc trực tiếp với các bên liên quan để thu thập yêu cầu và chuyển hóa nhu cầu nghiệp vụ thành tính năng phần mềm.",
+				"Hỗ trợ và cập nhật liên tục các ứng dụng nội bộ dựa trên phản hồi của người dùng và thay đổi trong nghiệp vụ."
 			]
 		},
 		{
 			"position": "Frontend Developer",
-			"companyName": "Joyful Co., Ltd",
+			"companyName": "G&G Fashion Co., Ltd",
 			"companyWebsite": "",
 			"startDate": "6/2024",
 			"endDate": "8/2025",
 			"accomplishments": [
-				"Phát triển giao diện web sử dụng PHP, HTML, CSS, SASS, Bootstrap, JQuery (AJAX), MySQL.",
-				"Hợp tác với team UI/UX để chuyển đổi thành giao diện người dùng responsive.",
-				"Tối ưu hóa website cho các thiết bị di động sử dụng Media query và Bootstrap.",
-				"Hỗ trợ khách hàng về website hosting và domain pointing.",
-				"Bảo trì và sửa lỗi website.",
-				"Viết báo cáo tiến độ công việc hàng tuần.",
-				"Tìm hiểu về công nghệ khác sau giờ làm việc để phục vụ việc mở rộng lĩnh vực phòng kỹ thuật theo yêu cầu của trưởng phòng.",
-				"Làm việc theo yêu cầu của cấp trên."
+				"Phát triển giao diện các module nghiệp vụ của hệ thống ERP bằng Vue và Ant Design.",
+				"Tích hợp REST API với backend và xử lý các luồng nhập liệu, tìm kiếm, lọc và quản lý dữ liệu.",
+				"Phối hợp chặt chẽ với team Backend để thiết kế và triển khai UI/UX cho các module nghiệp vụ của hệ thống ERP.",
+				"Bảo trì và xử lý lỗi cho hệ thống ERP, cải thiện trải nghiệm người dùng và giảm các lỗi phát sinh trong quá trình sử dụng.",
+				"Báo cáo tiến độ công việc hàng tuần cho quản lý."
 			]
 		},
 		{
@@ -103,14 +85,13 @@
 			"startDate": "11/2022",
 			"endDate": "5/2024",
 			"accomplishments": [
-				"Phát triển giao diện web sử dụng PHP, HTML, CSS, SASS, Bootstrap, JQuery (AJAX), MySQL.",
-				"Hợp tác với team UI/UX để chuyển đổi thành giao diện người dùng responsive.",
-				"Tối ưu hóa website cho các thiết bị di động sử dụng Media query và Bootstrap.",
-				"Hỗ trợ khách hàng về website hosting và domain pointing.",
-				"Bảo trì và sửa lỗi website.",
-				"Viết báo cáo tiến độ công việc hàng tuần.",
-				"Tìm hiểu về công nghệ khác sau giờ làm việc để phục vụ việc mở rộng lĩnh vực phòng kỹ thuật theo yêu cầu của trưởng phòng.",
-				"Làm việc theo yêu cầu của cấp trên."
+				"Xây dựng website cho khách hàng bằng PHP (Wordpress), HTML, CSS, SASS, Bootstrap, jQuery (AJAX) và MySQL.",
+				"Phát triển, xây dựng các block/component sử dụng React để tái sử dụng nhằm rút ngắn thời gian triển khai và đảm bảo giao diện đồng nhất giữa các dự án.",
+				"Phối hợp với team UI/UX để chuyển bản thiết kế thành giao diện responsive.",
+				"Tối ưu website cho thiết bị di động bằng Media Query và Bootstrap.",
+				"Hỗ trợ khách hàng về website hosting và trỏ domain.",
+				"Bảo trì, sửa lỗi website và báo cáo tiến độ hàng tuần.",
+				"Chủ động nghiên cứu công nghệ mới ngoài giờ làm việc (React Native) để mở rộng năng lực kỹ thuật của phòng theo định hướng của trưởng phòng."
 			]
 		},
 		{
@@ -120,11 +101,11 @@
 			"startDate": "5/2022",
 			"endDate": "11/2022",
 			"accomplishments": [
-				"Lắp ráp máy tính theo yêu cầu khách hàng.",
-				"Cài đặt Windows và phần mềm theo nhu cầu.",
-				"Kiểm tra và xử lý lỗi phần cứng, phần mềm.",
-				"Hỗ trợ khách hàng tại văn phòng giải quyết các vấn đề máy tính.",
-				"Làm việc theo yêu cầu của cấp trên."
+				"Lắp ráp máy tính theo cấu hình và nhu cầu của khách hàng.",
+				"Cài đặt Windows và phần mềm theo yêu cầu.",
+				"Kiểm tra, chẩn đoán và xử lý lỗi phần cứng, phần mềm.",
+				"Hỗ trợ khách hàng tại văn phòng giải quyết các vấn đề về máy tính.",
+				"Phối hợp cùng đồng nghiệp lắp đặt và cấu hình router, switch, mạng LAN (bao gồm chia VLAN) cho các doanh nghiệp lân cận, quy mô hơn 50 máy."
 			]
 		}
 	],
@@ -146,7 +127,7 @@
 			"achievements": []
 		}
 	],
-	"languages": [
+	"certifications": [
 		{
 			"name": "Tiếng Anh",
 			"proficiency": "TOEIC 680 (Nghe, Đọc), Giao tiếp căn bản."
@@ -157,6 +138,33 @@
 		}
 	],
 	"projects": [
+		{
+			"name": "Thời khóa biểu của tôi",
+			"description": "Ứng dụng thời khóa biểu Local dùng để track thông tin học.",
+			"url": "https://thoi-khoa-bieu.onrender.com/",
+			"image": "/gallery/demo-tkb-thumbnail.png",
+			"techstack": [
+				"NextJS 15",
+				"Shadcn UI",
+				"TailwindCSS",
+				"SQLite",
+				"Prisma ORM"
+			]
+		},
+		{
+			"name": "Renshyuu Nihongo",
+			"description": "Ứng dụng học tiếng Nhật.",
+			"url": "https://renshyuu-nihongo-fe.vercel.app/",
+			"image": "/gallery/demo-tkb-thumbnail.png",
+			"techstack": [
+				"NextJS 15",
+				"Shadcn UI",
+				"TailwindCSS",
+				"ASP.NET Core",
+				"PostgresSQL",
+				"Entity Framework Core"
+			]
+		},
 		{
 			"name": "bloodflame.vn",
 			"description": "Website thương mại điện tử.",
@@ -220,21 +228,25 @@
 				"Payload CMS",
 				"PostgresSQL"
 			]
-		},
-		{
-			"name": "Thời khóa biểu của tôi",
-			"description": "Ứng dụng thời khóa biểu Local dùng để track thông tin học.",
-			"url": "https://thoi-khoa-bieu.onrender.com/",
-			"image": "/gallery/demo-tkb-thumbnail.png",
-			"techstack": [
-				"NextJS 15",
-				"Shadcn UI",
-				"TailwindCSS",
-				"SQLite",
-				"Prisma ORM"
-			]
 		}
 	],
+	"nav": {
+		"home": "Trang chủ",
+		"about": "Giới thiệu",
+		"skills": "Kỹ năng",
+		"experience": "Kinh nghiệm",
+		"projects": "Dự án",
+		"education": "Học vấn",
+		"contact": "Liên hệ"
+	},
+	"sections": {
+		"skills": "Kỹ năng",
+		"experience": "Kinh nghiệm làm việc",
+		"projects": "Dự án",
+		"education": "Học vấn",
+		"certifications": "Chứng chỉ",
+		"contact": "Liên hệ"
+	},
 	"ui": {
 		"present": "Hiện tại",
 		"viewProject": "Xem dự án",

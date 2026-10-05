@@ -6,6 +6,7 @@ import { Download, GitBranch, Mail, Smartphone } from 'lucide-react';
 import { GSAPSlideLeft } from '@/components/animations/gsap-slide-left';
 import { GSAPSlideUp } from '@/components/animations/gsap-slide-up';
 import { GSAPSlideRight } from '@/components/animations/gsap-slide-right';
+import { Education, Experience, Certification, Skill } from '@/lib/types';
 
 const SectionHeader = ({ icon, title }: { icon: string; title: string }) => (
 	<div className='bg-slate-100 dark:bg-slate-900 rounded-md font-bold text-lg p-3 flex items-center gap-2 shadow border-l-4 border-sky-500 hover:translate-x-1 transition-all'>
@@ -18,28 +19,10 @@ export default function Homepage() {
 	const t = useTranslations();
 	const meta = t.raw('meta');
 	const sections = t.raw('sections');
-	const skills = t.raw('skills') as Array<{
-		title: string;
-		description: string[];
-	}>;
-	const experiences = t.raw('experiences') as Array<{
-		position: string;
-		companyName: string;
-		startDate: string;
-		endDate: string;
-		accomplishments: string[];
-	}>;
-	const education = t.raw('education') as Array<{
-		university: string;
-		major: string;
-		degrees: string;
-		startDate: string;
-		endDate: string;
-	}>;
-	const languages = t.raw('languages') as Array<{
-		name: string;
-		proficiency: string;
-	}>;
+	const skills = t.raw('skills') as Skill[];
+	const experiences = t.raw('experiences') as Experience[];
+	const education = t.raw('education') as Education[];
+	const certifications = t.raw('certifications') as Certification[];
 	const ui = t.raw('ui');
 
 	return (
@@ -58,7 +41,7 @@ export default function Homepage() {
 						</figure>
 						<h1 className='uppercase font-bold text-2xl'>{meta.name}</h1>
 						<ul className='list-none ps-0'>
-							{/* <li className='mb-3'>
+							<li className='mb-3'>
 								<Link
 									className='hover:text-sky-500'
 									target='_blank'
@@ -76,8 +59,8 @@ export default function Homepage() {
 									<Smartphone className='inline mr-1 align-top' /> Phone number:{' '}
 									{meta.phoneNumber}
 								</Link>
-							</li> */}
-							{/* <li className='mb-3'>
+							</li>
+							<li className='mb-3'>
 								<Link className='hover:text-sky-500' target='_blank' href={meta.github}>
 									<GitBranch className='inline mr-1 align-top' />
 									Github
@@ -92,10 +75,10 @@ export default function Homepage() {
 								>
 									<Download className='inline mr-1 align-top' /> {ui.downloadCV}
 								</Link>
-							</li> */}
+							</li>
 						</ul>
 
-						<p className='rounded-md'>{t('bio')}</p>
+						<p className='rounded-md'>{meta.summary}</p>
 					</GSAPSlideLeft>
 
 					<GSAPSlideRight className='flex-1'>
@@ -168,12 +151,12 @@ export default function Homepage() {
 
 			<div className='section mb-3'>
 				<GSAPSlideLeft>
-					<SectionHeader icon={`🌐`} title={sections.languages} />
+					<SectionHeader icon={`🌐`} title={sections.certifications} />
 				</GSAPSlideLeft>
 				<GSAPSlideUp>
 					<ul className='list-disc list-inside ms-4 mt-3'>
-						{languages.map((language, index) => (
-							<li key={index}>{language.name}</li>
+						{certifications.map((certification, index) => (
+							<li key={index}>{certification.name} - {certification.proficiency}</li>
 						))}
 					</ul>
 				</GSAPSlideUp>

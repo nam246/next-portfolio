@@ -1,0 +1,262 @@
+{
+	"meta": {
+		"name": "Vũ Hoàng Diệu Trung",
+		"email": "trungvuhoang2005@gmail.com",
+		"phoneNumber": "+84984041242",
+		"github": "https://github.com/nam246",
+		"summary": "4年以上のWeb開発および社内業務システム開発の経験を持つソフトウェアエンジニアです。ASP.NET Core、C#、Vue、React、Next.js、PHP/WordPress、およびSQL系データベース管理システムの使用経験があります。ERPや社内業務プロセスのデジタル化を支援するアプリケーションの開発に携わった経験があり、ITサポート、ネットワーク、システムのトラブルシューティングの基礎も備えています。要件分析から機能開発、保守、ユーザーサポートまで、一貫して対応することができます。"
+	},
+	"skills": [
+		{
+			"title": "フロントエンド開発",
+			"description": [
+				"主要スキル：HTML5、CSS3、SASS、JavaScript（ES6+）、TypeScript、レスポンシブWebデザイン。",
+				"フレームワーク／ライブラリ：React、Next.js、Vue、jQuery（AJAX）、Bootstrap 5、Tailwind CSS、Ant Design、Shadcn UI、Payload CMS。",
+				"デザインツール：Figma、Photoshop。",
+				"バージョン管理：Git。"
+			]
+		},
+		{
+			"title": "バックエンド・データベース開発",
+			"description": [
+				"言語／フレームワーク：C#（ASP.NET Core）、PHP（Laravel、WordPress）、Java、Python。",
+				"ORM：Entity Framework Core、Prisma ORM。",
+				"データベース：MySQL、PostgreSQL、SQLite、MSSQL、Oracle。",
+				"SQL（DDL、DML、DCL、TCL）、手続き型プログラミング（PL/SQL、T-SQL）。",
+				"RESTful API、HTTPプロトコル、JWT。",
+				"Docker、Docker Compose（基礎知識）。CI/CD：GitHub Actions、GitLab CI。",
+				"その他ツール：Postman。"
+			]
+		},
+		{
+			"title": "ITサポートスキル",
+			"description": [
+				"OS：Windows、Linux（インストール、設定、トラブルシューティング）。",
+				"ネットワーク（基礎）：TCP/IP、IPアドレス、サブネットマスク、DNS、DHCP、VLAN。ルーター、スイッチ、LAN／Wi-Fiの設定。ping、tracert、ipconfig/ifconfig、nslookupによるネットワーク障害の診断。",
+				"Microsoft Office、Google Workspace。",
+				"ハードウェア、ソフトウェア、OS、ネットワークのトラブル対応。",
+				"リモートサポートツール：TeamViewer、AnyDesk、リモートデスクトップ。",
+				"データセキュリティ、ウイルス対策ソフト、ファイアウォール。",
+				"Webホスティングのサポートおよびドメイン設定（DNSレコード）。"
+			]
+		},
+		{
+			"title": "ソフトスキル",
+			"description": [
+				"フロントエンド、バックエンド、UI/UXの各チーム間で円滑に連携し、効果的にチームワークを発揮できます。",
+				"素早い独学能力（ASP.NET CoreとNext.jsを独学し、フルスタックアプリケーションを開発）。",
+				"時間管理と定期的な進捗報告。"
+			]
+		}
+	],
+	"experiences": [
+		{
+			"position": "ソフトウェアエンジニア",
+			"companyName": "Hirdaramani FGL",
+			"companyWebsite": "",
+			"startDate": "2025年12月",
+			"endDate": "2026年6月",
+			"accomplishments": [
+				"ASP.NET Core、HTML、CSS、JavaScriptを用いて、社内Webアプリケーションを開発・保守し、会社のデジタルトランスフォーメーション（DX）プロジェクトを支援。",
+				"社内スタッフの使いやすさと業務効率を高めるため、UIおよびインタラクティブな機能を構築。",
+				"社内デジタル化システムのデータ処理に向けて、CRUD処理およびビジネスロジック層を実装。",
+				"関係者と直接やり取りして要件を収集し、業務ニーズをソフトウェアの機能に落とし込む。",
+				"ユーザーからのフィードバックや業務プロセスの変更に基づき、社内アプリケーションの継続的なサポートと更新を実施。"
+			]
+		},
+		{
+			"position": "フロントエンドエンジニア",
+			"companyName": "G&G Fashion Co., Ltd",
+			"companyWebsite": "",
+			"startDate": "2024年6月",
+			"endDate": "2025年8月",
+			"accomplishments": [
+				"VueとAnt Designを用いてERPシステムの業務モジュールのUIを開発。",
+				"バックエンドとのREST API連携を実装。データ入力、検索、フィルタリング、データ管理のフローを担当。",
+				"バックエンドチームと密に連携し、ERPシステムの業務モジュールのUI/UXを設計・実装。",
+				"ERPシステムの保守およびバグ修正を行い、ユーザーエクスペリエンスの向上と、運用中に発生する不具合の削減に貢献。",
+				"マネージャーへ毎週の作業進捗を報告。"
+			]
+		},
+		{
+			"position": "フロントエンドエンジニア",
+			"companyName": "Sikido Media & Advertising Inc.",
+			"companyWebsite": "",
+			"startDate": "2022年11月",
+			"endDate": "2024年5月",
+			"accomplishments": [
+				"PHP（WordPress）、HTML、CSS、SASS、Bootstrap、jQuery（AJAX）、MySQLを用いて、顧客向けWebサイトを構築。",
+				"Reactを用いて再利用可能なブロック／コンポーネントを開発し、納期の短縮とプロジェクト間でのUIの統一を実現。",
+				"UI/UXチームと連携し、デザインをレスポンシブなUIに実装。",
+				"メディアクエリとBootstrapを用いて、モバイル端末向けにWebサイトを最適化。",
+				"顧客に対するWebホスティングおよびドメイン設定のサポート。",
+				"Webサイトの保守・バグ修正を行い、毎週進捗を報告。",
+				"部門長の方針に沿って、部門の技術力を高めるため、業務時間外に新技術（React Native）を自主的に調査・学習。"
+			]
+		},
+		{
+			"position": "コンピューター技術者",
+			"companyName": "Viễn Đông Computer Ltd.",
+			"companyWebsite": "",
+			"startDate": "2022年5月",
+			"endDate": "2022年11月",
+			"accomplishments": [
+				"お客様の構成やニーズに合わせたPCの組み立て。",
+				"ご要望に応じたWindowsおよびソフトウェアのインストール。",
+				"ハードウェア・ソフトウェアの不具合の点検、診断、修理。",
+				"お客様のオフィスを訪問し、PCに関する問題の解決をサポート。",
+				"同僚と協力し、近隣企業（50台以上の規模）向けにルーター、スイッチ、LAN（VLAN分割を含む）の設置・設定を実施。"
+			]
+		}
+	],
+	"education": [
+		{
+			"university": "情報技術大学（UIT）",
+			"major": "情報技術",
+			"degrees": "学士（編入課程）",
+			"startDate": "2024",
+			"endDate": "在学中",
+			"achievements": []
+		},
+		{
+			"university": "ホーチミン市工業大学（IUH）",
+			"major": "情報技術",
+			"degrees": "短期大学士（準学士）",
+			"startDate": "2020",
+			"endDate": "2022",
+			"achievements": []
+		}
+	],
+	"certifications": [
+		{
+			"name": "英語",
+			"proficiency": "TOEIC 680点（リスニング・リーディング）、基礎的な日常会話レベル。"
+		},
+		{
+			"name": "日本語",
+			"proficiency": "JLPT N5。"
+		}
+	],
+	"projects": [
+		{
+			"name": "マイ時間割",
+			"description": "学習情報を管理するためのローカル時間割アプリ。",
+			"url": "https://thoi-khoa-bieu.onrender.com/",
+			"image": "/gallery/demo-tkb-thumbnail.png",
+			"techstack": [
+				"NextJS 15",
+				"Shadcn UI",
+				"TailwindCSS",
+				"SQLite",
+				"Prisma ORM"
+			]
+		},
+		{
+			"name": "Renshyuu Nihongo",
+			"description": "日本語学習アプリ。",
+			"url": "https://renshyuu-nihongo-fe.vercel.app/",
+			"image": "/gallery/demo-tkb-thumbnail.png",
+			"techstack": [
+				"NextJS 15",
+				"Shadcn UI",
+				"TailwindCSS",
+				"ASP.NET Core",
+				"PostgresSQL",
+				"Entity Framework Core"
+			]
+		},
+		{
+			"name": "bloodflame.vn",
+			"description": "ECサイト。",
+			"url": "",
+			"image": "/gallery/Screenshot1.png",
+			"techstack": ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"]
+		},
+		{
+			"name": "poohhousebridal.com",
+			"description": "ウェディングサービスのWebサイト。",
+			"url": "",
+			"image": "/gallery/Screenshot2.png",
+			"techstack": ["PHP", "Bootstrap 5", "JQuery", "AJAX", "MySQL"]
+		},
+		{
+			"name": "lepetitmusee.edu.vn",
+			"description": "学校のWebサイト。",
+			"url": "https://lepetitmusee.edu.vn/",
+			"image": "/gallery/Screenshot3.png",
+			"techstack": ["PHP", "Bootstrap 5", "ES6", "JQuery", "AJAX", "MySQL"]
+		},
+		{
+			"name": "acecafe.vn",
+			"description": "カフェのWebサイト。",
+			"url": "https://acecafe.vn/",
+			"image": "/gallery/Screenshot4.png",
+			"techstack": [
+				"PHP",
+				"Bootstrap 5",
+				"ES6",
+				"JQuery",
+				"AJAX",
+				"particle.js",
+				"MySQL"
+			]
+		},
+		{
+			"name": "cdhome.vn",
+			"description": "家具のWebサイト。",
+			"url": "http://demolp.free.nf/",
+			"image": "/gallery/cdhome.png",
+			"techstack": ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"]
+		},
+		{
+			"name": "joyfuldecor.com.vn",
+			"description": "インテリアデコレーションのWebサイト。",
+			"url": "http://joyful.free.nf/",
+			"image": "/gallery/Screenshot 2025-06-21 135850.png",
+			"techstack": ["PHP", "ES6", "Bootstrap 5", "JQuery", "MySQL"]
+		},
+		{
+			"name": "E-centre computer shop",
+			"description": "パソコンショップのWebサイト。",
+			"url": "https://computer-demo-13.vercel.app/",
+			"image": "/gallery/computer-demo-12.png",
+			"techstack": [
+				"NextJS",
+				"ES6",
+				"TypeScript",
+				"TailwindCSS",
+				"Payload CMS",
+				"PostgresSQL"
+			]
+		}
+	],
+	"nav": {
+		"home": "ホーム",
+		"about": "自己紹介",
+		"skills": "スキル",
+		"experience": "職務経歴",
+		"projects": "プロジェクト",
+		"education": "学歴",
+		"contact": "お問い合わせ"
+	},
+	"sections": {
+		"skills": "スキル",
+		"experience": "職務経歴",
+		"projects": "プロジェクト",
+		"education": "学歴",
+		"certifications": "資格",
+		"contact": "お問い合わせ"
+	},
+	"ui": {
+		"present": "現在",
+		"viewProject": "プロジェクトを見る",
+		"viewGithub": "GitHubを見る",
+		"techstack": "使用技術",
+		"accomplishments": "担当業務",
+		"downloadCV": "履歴書をダウンロード",
+		"contactMe": "連絡する",
+		"readMore": "もっと見る",
+		"close": "閉じる",
+		"major": "専攻"
+	}
+}

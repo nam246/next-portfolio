@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import './layout.css';
 
 // import { Providers } from "./providers";
 import { ThemeProvider } from '@/components/theme-provider';
@@ -31,7 +32,7 @@ export default async function RootLayout({
 	}
 
 	return (
-		<html lang={`vi`} suppressHydrationWarning>
+		<html className={inter.className} lang={locale} suppressHydrationWarning>
 			<head>
 				<link
 					rel='stylesheet'
@@ -41,7 +42,7 @@ export default async function RootLayout({
 					referrerPolicy='no-referrer'
 				/>
 			</head>
-			<body className={inter.className}>
+			<body>
 				<NextIntlClientProvider>
 					<ThemeProvider
 						attribute='class'

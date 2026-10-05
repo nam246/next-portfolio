@@ -1,4 +1,5 @@
 import { PageHeading } from "@/components/layout/PageHeading";
+import { CtaSection } from "@/components/ui/cta-section";
 
 export default function About() {
 	return (
@@ -85,6 +86,8 @@ export default function About() {
 					sự cho bản thân và cộng đồng.&quot;
 				</blockquote>
 			</div>
+
+			<CtaSection />
 		</>
 	);
 }

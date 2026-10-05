@@ -1,14 +1,18 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {useTranslations} from "next-intl";
 
 export default function Navigation() {
 	const pathname = usePathname();
+	
+	const t = useTranslations();
+	const nav = t.raw('nav');
 
 	const links = [
-		{ href: "/", label: "Home" },
-		{ href: "/projects", label: "Projects" },
-		{ href: "/about", label: "About" },
+		{ href: "/", label: nav.home },
+		{ href: "/projects", label: nav.projects },
+		{ href: "/about", label: nav.about },
 	];
 
 	return (

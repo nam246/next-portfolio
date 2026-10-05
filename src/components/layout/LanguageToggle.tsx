@@ -1,8 +1,8 @@
 'use client';
 
-import * as React from 'react';
 import { Languages } from 'lucide-react';
 import { useLocale } from 'next-intl';
+import { locales } from '@/lib/i18n';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -18,7 +18,7 @@ export function LanguageToggle() {
 	const router = useRouter();
 	const pathname = usePathname();
 
-	const changeLanguage = (nextLocale: 'en' | 'vi') => {
+	const changeLanguage = (nextLocale: 'en' | 'vi' | 'ja') => {
 		router.replace(pathname, { locale: nextLocale });
 	};
 
@@ -30,18 +30,15 @@ export function LanguageToggle() {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align='end'>
-				<DropdownMenuItem
-					onClick={() => changeLanguage('vi')}
-					className={locale === 'vi' ? 'bg-accent' : ''}
-				>
-					Tiếng Việt
-				</DropdownMenuItem>
-				<DropdownMenuItem
-					onClick={() => changeLanguage('en')}
-					className={locale === 'en' ? 'bg-accent' : ''}
-				>
-					English
-				</DropdownMenuItem>
+				{locales.map((loc, i) => (
+					<DropdownMenuItem
+						key={i}
+						onClick={() => changeLanguage(loc)}
+						className={locale === loc ? 'bg-accent' : ''}
+					>
+						{loc === 'en' ? 'English' : loc === 'vi' ? 'Tiếng Việt' : '日本語'}
+					</DropdownMenuItem>
+				))}
 			</DropdownMenuContent>
 		</DropdownMenu>
 	);

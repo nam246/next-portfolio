@@ -18,7 +18,7 @@ A modern, fast, and responsive portfolio website built to showcase my projects, 
 - **High Performance:** Built with Next.js App Router for optimal loading speed and SEO.
 - **Modern UI/UX:** Clean design, smooth animations using Framer Motion, GSAP and full dark/light mode support.
 - **Fully Responsive:** Seamless experience across mobile, tablet, and desktop screens.
-- **Contact Form:** Integrated email delivery with API routes/Resend.
+- **internationalization:** Support i18n multiple languages Vietnamese, English, Japanese using `next-intl`.
 - **MDX Support:** Easy to write and render markdown-based blog posts or case studies.S
 
 ---
@@ -30,3 +30,8 @@ A modern, fast, and responsive portfolio website built to showcase my projects, 
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **Deployment:** [Vercel](https://vercel.com/)
+
+## WIP
+
+- **Tích hợp CTA**: Thêm cái CTA gửi email về gmail.
+- **Chatbot**: Tích hợp chatbot AI.
