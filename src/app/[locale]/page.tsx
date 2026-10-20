@@ -9,9 +9,9 @@ import { GSAPSlideRight } from '@/components/animations/gsap-slide-right';
 import { Education, Experience, Certification, Skill } from '@/lib/types';
 
 const SectionHeader = ({ icon, title }: { icon: string; title: string }) => (
-	<div className='bg-slate-100 dark:bg-slate-900 rounded-md font-bold text-lg p-3 flex items-center gap-2 shadow border-l-4 border-sky-500 hover:translate-x-1 transition-all'>
-		<span className='text-sky-500 text-2xl'>{icon}</span>
-		<h2 className='text-sky-700 text-xl ps-2'>{title}</h2>
+	<div className='rounded-md font-bold text-lg p-3 flex items-center gap-2 shadow border-l-4 border-primary hover:translate-x-1 transition-all'>
+		<span className='text-primary text-2xl'>{icon}</span>
+		<h2 className='text-primary text-xl ps-2'>{title}</h2>
 	</div>
 );
 
@@ -43,7 +43,7 @@ export default function Homepage() {
 						<ul className='list-none ps-0'>
 							<li className='mb-3'>
 								<Link
-									className='hover:text-sky-500'
+									className='hover:text-primary'
 									target='_blank'
 									href={'mailto:' + meta.email}
 								>
@@ -52,7 +52,7 @@ export default function Homepage() {
 							</li>
 							<li className='mb-3'>
 								<Link
-									className='hover:text-sky-500'
+									className='hover:text-primary'
 									target='_blank'
 									href={'tel:' + meta.phoneNumber}
 								>
@@ -61,14 +61,14 @@ export default function Homepage() {
 								</Link>
 							</li>
 							<li className='mb-3'>
-								<Link className='hover:text-sky-500' target='_blank' href={meta.github}>
+								<Link className='hover:text-primary' target='_blank' href={meta.github}>
 									<GitBranch className='inline mr-1 align-top' />
 									Github
 								</Link>
 							</li>
 							<li className='mb-3'>
 								<Link
-									className='hover:text-sky-500'
+									className='hover:text-primary'
 									target='_blank'
 									href='/VuHoangDieuTrung-Software Developer.pdf'
 									download={true}

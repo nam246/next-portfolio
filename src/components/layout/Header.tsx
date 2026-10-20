@@ -4,10 +4,10 @@ import { LanguageToggle } from './LanguageToggle';
 
 export default function Header() {
 	return (
-		<header className='bg-white dark:bg-black rounded-lg shadow py-2 mb-5'>
+		<header className='bg-primary-foreground rounded-lg shadow py-2 mb-5'>
 			<div className='flex aligns-center justify-between'>
 				<Navigation />
-				<div className='space-x-1'>
+				<div className='space-x-1 px-2'>
 					<ModeToggle />
 					<LanguageToggle />
 				</div>

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Intel_One_Mono } from 'next/font/google';
+import { cn } from "@/lib/utils"
 import './globals.css';
 import './layout.css';
 
@@ -13,6 +15,11 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
+const intelOneMono = Intel_One_Mono({
+	subsets: ['latin', 'latin-ext', 'vietnamese'],
+	weight: ['300', '400', '500', '600', '700'],
+	variable: '--font-intel-one-mono',
+});
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -32,7 +39,7 @@ export default async function RootLayout({
 	}
 
 	return (
-		<html className={inter.className} lang={locale} suppressHydrationWarning>
+		<html className={cn("antialiased", intelOneMono.variable)} lang={locale} suppressHydrationWarning>
 			<head>
 				<link
 					rel='stylesheet'
